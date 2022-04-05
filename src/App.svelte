@@ -170,7 +170,7 @@
 
         <Dynamic min={0} max={20} bind:result={CVP}>CVP</Dynamic>
 
-        <Dynamic min={6} max={12} bind:result={PAWP}>
+        <Dynamic min={0} max={35} bind:result={PAWP}>
           Pulmonary arterial wedge pressure
         </Dynamic>
 
