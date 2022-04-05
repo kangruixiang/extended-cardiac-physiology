@@ -115,171 +115,66 @@
       <div
         class="grid grid-cols-1 mt-4 md:mt-4 md:grid-cols-2 gap-x-6 gap-y-2 bottom"
       >
-        <Dynamic
-          min={40}
-          max={300}
-          result={LB}
-          on:slide={(e) => (LB = e.detail.result)}
-        >
+        <Dynamic min={40} max={300} bind:result={LB}>
           Weight (lbs)
           {Math.round(KG)} Kg
         </Dynamic>
 
-        <Dynamic
-          min={53}
-          max={76}
-          result={inches}
-          on:slide={(e) => (inches = e.detail.result)}
-        >
+        <Dynamic min={53} max={76} bind:result={inches}>
           Height (in)
           {Math.floor(feet)}"{Math.round(feetRemainder)}
           {Math.round(CM * 100) / 100} cm
         </Dynamic>
 
-        <Dynamic
-          min={60}
-          max={100}
-          result={SaO2}
-          on:slide={(e) => (SaO2 = e.detail.result)}
-        >
-          SaO2
-        </Dynamic>
+        <Dynamic min={60} max={100} bind:result={SaO2}>SaO2</Dynamic>
 
-        <Dynamic
-          min={30}
-          max={100}
-          result={SvO2}
-          on:slide={(e) => (SvO2 = e.detail.result)}
-        >
-          SvO2
-        </Dynamic>
+        <Dynamic min={30} max={100} bind:result={SvO2}>SvO2</Dynamic>
 
-        <Dynamic
-          min={4}
-          max={17}
-          step={0.1}
-          result={HGB}
-          on:slide={(e) => (HGB = e.detail.result)}
-        >
+        <Dynamic min={4} max={17} step={0.1} bind:result={HGB}>
           Hemoglobin
         </Dynamic>
 
-        <Dynamic
-          min={1}
-          max={100}
-          result={Age}
-          on:slide={(e) => (Age = e.detail.result)}
-        >
-          Age
-        </Dynamic>
+        <Dynamic min={1} max={100} bind:result={Age}>Age</Dynamic>
 
-        <Dynamic
-          min={20}
-          max={200}
-          result={HR}
-          on:slide={(e) => (HR = e.detail.result)}
-        >
-          HR
-        </Dynamic>
+        <Dynamic min={20} max={200} bind:result={HR}>HR</Dynamic>
 
-        <Dynamic
-          min={1}
-          max={15}
-          result={CO}
-          on:slide={(e) => (CO = e.detail.result)}
-        >
+        <Dynamic min={1} max={15} bind:result={CO}>
           CO calculated using O2 delivery
         </Dynamic>
 
-        <Dynamic
-          min={1}
-          max={15}
-          result={CO2}
-          on:slide={(e) => (CO2 = e.detail.result)}
-        >
+        <Dynamic min={1} max={15} bind:result={CO2}>
           CO calculated using stroke volume
         </Dynamic>
 
-        <Dynamic
-          min={10}
-          max={150}
-          result={SV}
-          on:slide={(e) => (SV = e.detail.result)}
-        >
-          Stroke volume
-        </Dynamic>
+        <Dynamic min={10} max={150} bind:result={SV}>Stroke volume</Dynamic>
 
-        <Dynamic
-          min={0}
-          max={100}
-          result={SVI}
-          on:slide={(e) => (SVI = e.detail.result)}
-        >
+        <Dynamic min={0} max={100} bind:result={SVI}>
           Stroke volume index
         </Dynamic>
 
-        <Dynamic
-          min={60}
-          max={240}
-          result={SBP}
-          on:slide={(e) => (SBP = e.detail.result)}
-        >
+        <Dynamic min={60} max={240} bind:result={SBP}>
           Systolic blood pressure
         </Dynamic>
 
-        <Dynamic
-          min={10}
-          max={120}
-          result={DBP}
-          on:slide={(e) => (DBP = e.detail.result)}
-        >
+        <Dynamic min={10} max={120} bind:result={DBP}>
           Diastolic blood pressure
         </Dynamic>
 
-        <Dynamic
-          min={15}
-          max={25}
-          result={PASP}
-          on:slide={(e) => (PASP = e.detail.result)}
-        >
+        <Dynamic min={15} max={25} bind:result={PASP}>
           PA systolic pressure
         </Dynamic>
 
-        <Dynamic
-          min={8}
-          max={15}
-          result={PADP}
-          on:slide={(e) => (PADP = e.detail.result)}
-        >
+        <Dynamic min={8} max={15} bind:result={PADP}>
           PA diastolic pressure
         </Dynamic>
 
-        <Dynamic
-          min={0}
-          max={20}
-          result={CVP}
-          on:slide={(e) => (CVP = e.detail.result)}
-        >
-          CVP
-        </Dynamic>
+        <Dynamic min={0} max={20} bind:result={CVP}>CVP</Dynamic>
 
-        <Dynamic
-          min={6}
-          max={12}
-          result={PAWP}
-          on:slide={(e) => (PAWP = e.detail.result)}
-        >
+        <Dynamic min={6} max={12} bind:result={PAWP}>
           Pulmonary arterial wedge pressure
         </Dynamic>
 
-        <Dynamic
-          min={15}
-          max={70}
-          result={EF}
-          on:slide={(e) => (EF = e.detail.result)}
-        >
-          Ejection fraction
-        </Dynamic>
+        <Dynamic min={15} max={70} bind:result={EF}>Ejection fraction</Dynamic>
       </div>
     </div>
   </div>
@@ -330,7 +225,7 @@
       @apply font-semibold focus:outline-none focus:bg-white focus:border-zinc-800 border-zinc-800 border-2 border-solid bg-zinc-50 text-zinc-800 rounded-md   outline-none focus:ring-0;
     }
     .label {
-      @apply font-semibold text-sm;
+      @apply font-semibold text-sm font-sans;
     }
     .input-text {
       @apply px-2 max-h-12 focus:bg-white focus:ring-0 w-12   focus:border-zinc-800 border-zinc-200  py-2 rounded-md bg-zinc-50  font-semibold;
