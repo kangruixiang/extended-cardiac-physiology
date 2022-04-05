@@ -73,7 +73,7 @@
 
           <Calculated data={SVI}>Stroke volume index (SVI):</Calculated>
 
-          <Calculated data={MPAP}>Mean Artery Pressure (MPAP):</Calculated>
+          <Calculated data={MAP}>Mean Artery Pressure (MAP):</Calculated>
 
           <Calculated data={SVR} min={900} max={1440}>
             Systemic vascular resistance (SVR):
