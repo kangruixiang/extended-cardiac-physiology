@@ -6,7 +6,7 @@
   let LB = 140,
     inches = 70,
     HGB = 14,
-    Age = 70,
+    Age = 50,
     SaO2 = 100,
     SvO2 = 70,
     CVP = 6,
@@ -55,11 +55,11 @@
       <div class="py-4 border-b md:mb-12 top border-zinc-400">
         <h2>Extended Cardiac Physiology</h2>
         <div class="grid grid-cols-1 md:grid-cols-2">
-          <Calculated data={CO} min={4}>
+          <Calculated data={CO} min={4} max={8}>
             Cardiac output (CO) (4 - 8 L/min):
           </Calculated>
 
-          <Calculated data={CI} min={2}>
+          <Calculated data={CI} min={2} max={4}>
             Cardiac index (CI) (2 - 4 L/min/m2):
           </Calculated>
 
@@ -69,45 +69,51 @@
             Pulmonary artery pulsatile index (PAPI):
           </Calculated>
 
-          <Calculated data={SV}>Stroke volume (SV):</Calculated>
+          <Calculated data={SV} min={60} max={100}
+            >Stroke volume (SV):</Calculated
+          >
 
-          <Calculated data={SVI}>Stroke volume index (SVI):</Calculated>
+          <Calculated data={SVI} min={33} max={47}
+            >Stroke volume index (SVI):</Calculated
+          >
 
-          <Calculated data={MAP}>Mean Artery Pressure (MAP):</Calculated>
+          <Calculated data={MAP} min={70} max={105}
+            >Mean Artery Pressure (MAP):</Calculated
+          >
 
           <Calculated data={SVR} min={900} max={1440}>
             Systemic vascular resistance (SVR):
           </Calculated>
 
-          <Calculated data={SVRI}>
+          <Calculated data={SVRI} min={1970} max={2390}>
             Systemic vascular resistance index (SVRI):
           </Calculated>
 
-          <Calculated data={MPAP}>
+          <Calculated data={MPAP} min={10} max={20}>
             Mean Pulmonary Artery Pressure (MPAP):
           </Calculated>
 
-          <Calculated data={PVR}>
+          <Calculated data={PVR} max={250}>
             Pulmonary vascular resistance (PVR):
           </Calculated>
 
-          <Calculated data={PVRI}>
+          <Calculated data={PVRI} min={255} max={285}>
             Pulmonary vascular resistance index (PVRI):
           </Calculated>
 
-          <Calculated data={LVSW}>
+          <Calculated data={LVSW} min={58} max={104}>
             Left ventricular stroke work (LVSW):
           </Calculated>
 
-          <Calculated data={LVSWI}>
+          <Calculated data={LVSWI} min={50} max={62}>
             Left ventricular stroke work index (LVSWI):
           </Calculated>
 
-          <Calculated data={RVSW}>
+          <Calculated data={RVSW} min={8} max={16}>
             Right ventricular stroke work (RVSW):
           </Calculated>
 
-          <Calculated data={RVSWI}>
+          <Calculated data={RVSWI} min={5} max={10}>
             Right ventricular stroke work index (RVSWI):
           </Calculated>
         </div>

@@ -1,7 +1,7 @@
 <script>
   export let data;
-  export let min;
-  export let max;
+  export let min = 0;
+  export let max = 1000;
 </script>
 
 <div class="w-full">
