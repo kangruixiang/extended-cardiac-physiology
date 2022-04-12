@@ -1,4 +1,5 @@
 <script>
+  import katex from "katex";
   import Dynamic from "./Dynamic.svelte";
   import Calculated from "./Calculated.svelte";
 
@@ -17,6 +18,7 @@
     DBP = 80,
     EF = 55,
     PAWP = 10;
+  let HgbT = "Hgb";
 
   $: feet = inches / 12; // Converts inches to feet
   $: CM = inches * 2.54; // Converts inches to cm
@@ -45,31 +47,69 @@
   $: LVSWI = SVI * (MAP - PAWP) * 0.0136;
   $: RVSW = SV * (MPAP - CVP) * 0.0136;
   $: RVSWI = SVI * (MPAP - CVP) * 0.0136;
+
+  let equation = "CO = \\frac{HR\\times SV}{1000}\\, (4 - 8 L/min)";
+
+  $: katexString = katex.renderToString(equation, {
+    displayMode: true,
+    throwOnError: false,
+    output: "mathml",
+  });
 </script>
 
 <main>
-  <div class="container flex justify-center max-w-6xl align-middle">
+  <div class="container flex justify-center align-middle">
     <div
-      class="flex flex-col w-full px-2 py-4 my-6 rounded-lg lg:p-24 lg:border-2 lg:border-solid lg:border-zinc-900 xl:max-w-6xl"
+      class="flex flex-col w-full px-2 py-4 my-6 rounded-lg lg:p-24 lg:border-2 lg:border-solid lg:border-zinc-900"
     >
       <div class="py-4 border-b md:mb-12 top border-zinc-400">
         <h2>Extended Cardiac Physiology</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2">
-          <Calculated data={CO} min={4} max={8}>
-            Cardiac output (CO) (4 - 8 L/min):
+        <div
+          class="w-full px-4 py-2 my-2 overflow-x-auto rounded-md bg-zinc-100"
+        >
+          {@html katexString}
+        </div>
+        <div class="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 gap-x-10">
+          <Calculated
+            data={CO}
+            min={4}
+            max={8}
+            on:eq={() =>
+              (equation =
+                "CO = \\frac{O_2\\,Delivery}{(S_aO_2 - S_vO_2)\\times 0.01\\times Hgb\\times 13.4}\\,(4 - 8 L/min)")}
+          >
+            Cardiac output (CO):
           </Calculated>
 
-          <Calculated data={CI} min={2} max={4}>
-            Cardiac index (CI) (2 - 4 L/min/m2):
+          <Calculated
+            data={CI}
+            min={2}
+            max={4}
+            on:eq={() => {
+              equation = "CI = \\frac{CO}{BSA}\\,(2 - 4 L/min/m^2)";
+            }}
+          >
+            Cardiac index (CI):
           </Calculated>
 
-          <Calculated data={CPO}>Cardiac power output (CPO):</Calculated>
+          <Calculated
+            data={CPO}
+            on:eq={() =>
+              (equation =
+                "CPO=\\frac{Mean\\,artery\\,pressure\\times Cardiac\\,output}{451}")}
+            >Cardiac power output (CPO):</Calculated
+          >
 
           <Calculated data={PAPI}>
             Pulmonary artery pulsatile index (PAPI):
           </Calculated>
 
-          <Calculated data={SV} min={60} max={100}
+          <Calculated
+            data={SV}
+            min={60}
+            max={100}
+            on:eq={() => (equation = "SV=\\frac{CO\\times HR}{1000}")}
+          >
             >Stroke volume (SV):</Calculated
           >
 
@@ -77,20 +117,25 @@
             >Stroke volume index (SVI):</Calculated
           >
 
-          <Calculated data={MAP} min={70} max={105}
-            >Mean Artery Pressure (MAP):</Calculated
+          <Calculated data={MAP} min={70} max={105} eq={"(SBP + 2 * DBP) / 3"}
+            >Mean artery pressure (MAP) (70-105 mmHg):</Calculated
           >
 
           <Calculated data={SVR} min={900} max={1440}>
             Systemic vascular resistance (SVR):
           </Calculated>
 
-          <Calculated data={SVRI} min={1970} max={2390}>
+          <Calculated
+            data={SVRI}
+            min={1970}
+            max={2390}
+            eq={"80 * (MAP - CVP) / CI | 1970 – 2390 dynes · sec/cm5/m2"}
+          >
             Systemic vascular resistance index (SVRI):
           </Calculated>
 
           <Calculated data={MPAP} min={10} max={20}>
-            Mean Pulmonary Artery Pressure (MPAP):
+            Mean pulmonary artery pressure (MPAP):
           </Calculated>
 
           <Calculated data={PVR} max={250}>
@@ -119,7 +164,7 @@
         </div>
       </div>
       <div
-        class="grid grid-cols-1 mt-4 md:mt-4 md:grid-cols-2 gap-x-6 gap-y-2 bottom"
+        class="grid grid-cols-1 mt-4 md:mt-4 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-2 bottom"
       >
         <Dynamic min={40} max={300} bind:result={LB}>
           Weight (lbs)
@@ -136,7 +181,15 @@
 
         <Dynamic min={30} max={100} bind:result={SvO2}>SvO2</Dynamic>
 
-        <Dynamic min={4} max={17} step={0.1} bind:result={HGB}>
+        <Dynamic
+          min={4}
+          max={17}
+          step={0.1}
+          bind:result={HGB}
+          on:slide={() => {
+            HgbT;
+          }}
+        >
           Hemoglobin
         </Dynamic>
 
