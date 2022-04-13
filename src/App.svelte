@@ -71,7 +71,7 @@
       class="flex flex-col w-full px-2 my-2 rounded-lg lg:px-24 lg:my-12 lg:pt-24 lg:pb-12 lg:border-2 lg:border-solid lg:border-zinc-900"
     >
       <div
-        class="py-4 overflow-y-auto border-b md:h-auto md:mb-12 top border-zinc-400"
+        class="py-4 overflow-y-auto border-b h-1/3 md:h-auto md:mb-12 top border-zinc-400"
       >
         <h2>Extended Cardiac Physiology</h2>
         <div
@@ -200,7 +200,7 @@
         </div>
       </div>
       <div
-        class="grid grid-cols-1 mt-4 overflow-y-auto h-1/2 md:h-auto md:mt-4 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-2 bottom"
+        class="grid grid-cols-1 mt-4 overflow-y-auto h-2/3 md:h-auto md:mt-4 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-2 bottom"
       >
         <Dynamic min={40} max={300} bind:result={LB}>
           Weight (lbs)
