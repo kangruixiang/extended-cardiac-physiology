@@ -53,16 +53,26 @@
   $: katexString = katex.renderToString(equation, {
     displayMode: true,
     throwOnError: false,
-    output: "mathml",
   });
 </script>
 
+<svelte:head>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
+    crossorigin="anonymous"
+  />
+</svelte:head>
+
 <main>
-  <div class="container flex justify-center align-middle">
+  <div class="container flex justify-center h-screen align-middle md:h-auto">
     <div
-      class="flex flex-col w-full px-2 py-4 my-6 rounded-lg lg:p-24 lg:border-2 lg:border-solid lg:border-zinc-900"
+      class="flex flex-col w-full px-2 my-2 rounded-lg lg:px-24 lg:my-12 lg:pt-24 lg:pb-12 lg:border-2 lg:border-solid lg:border-zinc-900"
     >
-      <div class="py-4 border-b md:mb-12 top border-zinc-400">
+      <div
+        class="py-4 overflow-y-auto border-b md:h-auto md:mb-12 top border-zinc-400"
+      >
         <h2>Extended Cardiac Physiology</h2>
         <div
           class="w-full px-4 py-2 my-2 overflow-x-auto rounded-md bg-zinc-100"
@@ -76,7 +86,7 @@
             max={8}
             on:eq={() =>
               (equation =
-                "CO = \\frac{O_2\\,Delivery}{(S_aO_2 - S_vO_2)\\times 0.01\\times Hgb\\times 13.4}\\,(4 - 8 L/min)")}
+                "CO = \\frac{\\text{oxygen delivery}}{(S_aO_2 - S_vO_2)\\times 0.01\\times \\text{Hgb}\\times 13.4}\\,(4 - 8 L/min)")}
           >
             Cardiac output (CO):
           </Calculated>
@@ -96,11 +106,16 @@
             data={CPO}
             on:eq={() =>
               (equation =
-                "CPO=\\frac{Mean\\,artery\\,pressure\\times Cardiac\\,output}{451}")}
+                "CPO=\\frac{\\text{mean artery pressure}\\times \\text{cardiac output}}{451}")}
             >Cardiac power output (CPO):</Calculated
           >
 
-          <Calculated data={PAPI}>
+          <Calculated
+            data={PAPI}
+            on:eq={() =>
+              (equation =
+                "PAPI = \\frac{\\text{pulmonary artery systolic pressure} - \\text{pulmonary artery diastolic pressure}}{\\text{central venous pressure}}")}
+          >
             Pulmonary artery pulsatile index (PAPI):
           </Calculated>
 
@@ -108,20 +123,41 @@
             data={SV}
             min={60}
             max={100}
-            on:eq={() => (equation = "SV=\\frac{CO\\times HR}{1000}")}
+            on:eq={() =>
+              (equation =
+                "SV=\\frac{\\text{cardiac output}\\times\\text{heart rate}}{1000}")}
           >
-            >Stroke volume (SV):</Calculated
+            Stroke volume (SV):</Calculated
           >
 
-          <Calculated data={SVI} min={33} max={47}
+          <Calculated
+            data={SVI}
+            min={33}
+            max={47}
+            on:eq={() =>
+              (equation =
+                "SV=\\frac{\\text{cardiac index}\\times\\text{heart rate}}{1000}")}
             >Stroke volume index (SVI):</Calculated
           >
 
-          <Calculated data={MAP} min={70} max={105} eq={"(SBP + 2 * DBP) / 3"}
-            >Mean artery pressure (MAP) (70-105 mmHg):</Calculated
+          <Calculated
+            data={MAP}
+            min={70}
+            max={105}
+            on:eq={() =>
+              (equation =
+                "MAP = \\frac{\\text{systolic BP} + 2\\times \\text{diastolic BP}}{3} (70-105 mmHg)")}
+            >Mean artery pressure (MAP):</Calculated
           >
 
-          <Calculated data={SVR} min={900} max={1440}>
+          <Calculated
+            data={SVR}
+            min={900}
+            max={1440}
+            on:eq={() =>
+              (equation =
+                "SVR = \\frac{80\\times(\\text{MAP} - \\text{CVP})}{3} (70-105 mmHg)")}
+          >
             Systemic vascular resistance (SVR):
           </Calculated>
 
@@ -164,7 +200,7 @@
         </div>
       </div>
       <div
-        class="grid grid-cols-1 mt-4 md:mt-4 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-2 bottom"
+        class="grid grid-cols-1 mt-4 overflow-y-auto h-1/2 md:h-auto md:mt-4 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-2 bottom"
       >
         <Dynamic min={40} max={300} bind:result={LB}>
           Weight (lbs)
@@ -177,9 +213,9 @@
           {Math.round(CM * 100) / 100} cm
         </Dynamic>
 
-        <Dynamic min={60} max={100} bind:result={SaO2}>SaO2</Dynamic>
+        <Dynamic min={60} max={100} bind:result={SaO2}>SaO2 (%)</Dynamic>
 
-        <Dynamic min={30} max={100} bind:result={SvO2}>SvO2</Dynamic>
+        <Dynamic min={30} max={100} bind:result={SvO2}>SvO2 (%)</Dynamic>
 
         <Dynamic
           min={4}
@@ -190,15 +226,16 @@
             HgbT;
           }}
         >
-          Hemoglobin
+          Hemoglobin (g/dL)
         </Dynamic>
 
-        <Dynamic min={1} max={100} bind:result={Age}>Age</Dynamic>
+        <Dynamic min={1} max={100} bind:result={Age}>Age (years)</Dynamic>
 
-        <Dynamic min={20} max={200} bind:result={HR}>HR</Dynamic>
+        <Dynamic min={20} max={200} bind:result={HR}>HR (beats per min)</Dynamic
+        >
 
         <Dynamic min={1} max={15} bind:result={CO}>
-          CO calculated using O2 delivery
+          CO calculated using O2 delivery (L/min)
         </Dynamic>
 
         <Dynamic min={1} max={15} bind:result={CO2}>
@@ -212,28 +249,32 @@
         </Dynamic>
 
         <Dynamic min={60} max={240} bind:result={SBP}>
-          Systolic blood pressure
+          Systolic blood pressure (mmHg)
         </Dynamic>
 
         <Dynamic min={10} max={120} bind:result={DBP}>
-          Diastolic blood pressure
+          Diastolic blood pressure (mmHg)
         </Dynamic>
 
         <Dynamic min={15} max={25} bind:result={PASP}>
-          PA systolic pressure
+          PA systolic pressure (mmHg)
         </Dynamic>
 
         <Dynamic min={8} max={15} bind:result={PADP}>
-          PA diastolic pressure
+          PA diastolic pressure (mmHg)
         </Dynamic>
 
-        <Dynamic min={0} max={20} bind:result={CVP}>CVP</Dynamic>
+        <Dynamic min={0} max={20} bind:result={CVP}>CVP (mmHg)</Dynamic>
 
         <Dynamic min={0} max={35} bind:result={PAWP}>
-          Pulmonary arterial wedge pressure
+          Pulmonary arterial wedge pressure (mmHg)
         </Dynamic>
-
-        <Dynamic min={15} max={70} bind:result={EF}>Ejection fraction</Dynamic>
+      </div>
+      <div class="text-sm font-semibold text-center md:mt-12">
+        Email me at <a
+          class="font-sans hover:underline"
+          href="mailto:kangruixiang@gmail.com">kangruixiang@gmail.com</a
+        > for questions or suggestions
       </div>
     </div>
   </div>
