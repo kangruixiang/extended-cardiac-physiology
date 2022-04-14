@@ -88,7 +88,7 @@
             max={8}
             on:eq={() =>
               (equation =
-                "CO = \\frac{O_2\\text{ delivery}}{(S_aO_2 - S_vO_2)\\times 0.01\\times \\text{Hgb}\\times 13.4}\\,(4 - 8 L/min)")}
+                "\\text{CO} = \\frac{O_2\\text{ delivery}}{(S_aO_2 - S_vO_2)\\times 0.01\\times \\text{Hgb}\\times 13.4}\\,(4 - 8\\,L/min)")}
           >
             Cardiac output (CO):
           </Calculated>
@@ -99,7 +99,7 @@
             max={4}
             on:eq={() => {
               equation =
-                "CI = \\frac{CO}{\\text{body surface area}}\\,(2 - 4 L/min/m^2)";
+                "\\text{CI} = \\frac{\\text{CO}}{\\text{body surface area}}\\,(2 - 4\\,L/min/m^2)";
             }}
           >
             Cardiac index (CI):
@@ -107,7 +107,9 @@
 
           <Calculated
             data={CPO}
-            on:eq={() => (equation = "CPO=\\frac{MAP\\times CO}{451}")}
+            on:eq={() =>
+              (equation =
+                "\\text{CPO}=\\frac{\\text{MAP}\\times \\text{CO}}{451}")}
             >Cardiac power output (CPO):</Calculated
           >
 
@@ -115,7 +117,7 @@
             data={PAPI}
             on:eq={() =>
               (equation =
-                "PAPI = \\frac{\\text{PASP} - \\text{PADP}}{\\text{CVP}}")}
+                "\\text{PAPI} = \\frac{\\text{PASP} - \\text{PADP}}{\\text{CVP}}")}
           >
             Pulmonary artery pulsatile index (PAPI):
           </Calculated>
@@ -125,7 +127,8 @@
             min={60}
             max={100}
             on:eq={() =>
-              (equation = "SV=\\frac{\\text{CO}\\times\\text{HR}}{1000}")}
+              (equation =
+                "\\text{SV}=\\frac{\\text{CO}\\times\\text{HR}}{1000}")}
           >
             Stroke volume (SV):</Calculated
           >
@@ -135,7 +138,8 @@
             min={33}
             max={47}
             on:eq={() =>
-              (equation = "SV=\\frac{\\text{CI}\\times\\text{HR}}{1000}")}
+              (equation =
+                "\\text{SV}=\\frac{\\text{CI}\\times\\text{HR}}{1000}")}
             >Stroke volume index (SVI):</Calculated
           >
 
@@ -145,7 +149,7 @@
             max={105}
             on:eq={() =>
               (equation =
-                "MAP = \\frac{\\text{SBP} + 2\\times \\text{DBP}}{3} (70-105 mmHg)")}
+                "\\text{MAP} = \\frac{\\text{SBP} + 2\\times \\text{DBP}}{3}\\,(70-105\\,mmHg)")}
             >Mean artery pressure (MAP):</Calculated
           >
 
@@ -155,7 +159,7 @@
             max={1440}
             on:eq={() =>
               (equation =
-                "SVR = \\frac{80\\times(\\text{MAP} - \\text{CVP})}{3} (70-105 mmHg)")}
+                "\\text{SVR} = \\frac{80\\times(\\text{MAP} - \\text{CVP})}{3}\\,(70-105\\,mmHg)")}
           >
             Systemic vascular resistance (SVR):
           </Calculated>
@@ -166,36 +170,84 @@
             max={2390}
             on:eq={() =>
               (equation =
-                "\\frac{80\\times (\\text{MAP} - \\text{CVP})}{CI}\\, 1970 – 239\\, dynes · sec/cm^5/m^2")}
+                "\\text{SVRI} = \\frac{80\\times (\\text{MAP} - \\text{CVP})}{CI}\\,1970 – 2390\\,dynes · sec/cm^5/m^2")}
           >
             Systemic vascular resistance index (SVRI):
           </Calculated>
 
-          <Calculated data={MPAP} min={10} max={20}>
+          <Calculated
+            data={MPAP}
+            min={10}
+            max={20}
+            on:eq={() =>
+              (equation =
+                "\\text{MPAP} = \\frac{\\text{PASP} + 2\\times \\text{PADP}}{3}\\,(10-20\\,mmHg)")}
+          >
             Mean pulmonary artery pressure (MPAP):
           </Calculated>
 
-          <Calculated data={PVR} max={250}>
+          <Calculated
+            data={PVR}
+            max={250}
+            on:eq={() =>
+              (equation =
+                "\\text{PVR} = \\frac{80\\times(\\text{MPAP} - \\text{PAWP})}{3}\\,(<250\\,mmHg)")}
+          >
             Pulmonary vascular resistance (PVR):
           </Calculated>
 
-          <Calculated data={PVRI} min={255} max={285}>
+          <Calculated
+            data={PVRI}
+            min={255}
+            max={285}
+            on:eq={() =>
+              (equation =
+                "\\text{PVRI} = \\frac{80\\times(\\text{MPAP} - \\text{PAWP})}{3}\\,(255-285\\,mmHg)")}
+          >
             Pulmonary vascular resistance index (PVRI):
           </Calculated>
 
-          <Calculated data={LVSW} min={58} max={104}>
+          <Calculated
+            data={LVSW}
+            min={58}
+            max={104}
+            on:eq={() =>
+              (equation =
+                "\\text{LVSW} = \\text{SV}\\times(\\text{MAP} - \\text{PAWP})\\times 0.0136")}
+          >
             Left ventricular stroke work (LVSW):
           </Calculated>
 
-          <Calculated data={LVSWI} min={50} max={62}>
+          <Calculated
+            data={LVSWI}
+            min={50}
+            max={62}
+            on:eq={() =>
+              (equation =
+                "\\text{LVSWI} = \\text{SVI}\\times(\\text{PAWP} - \\text{CVP})\\times 0.0136")}
+          >
             Left ventricular stroke work index (LVSWI):
           </Calculated>
 
-          <Calculated data={RVSW} min={8} max={16}>
+          <Calculated
+            data={RVSW}
+            min={8}
+            max={16}
+            on:eq={() =>
+              (equation =
+                "\\text{RVSW} = \\text{SV}\\times(\\text{MAPA} - \\text{CVP})\\times 0.0136")}
+          >
             Right ventricular stroke work (RVSW):
           </Calculated>
 
-          <Calculated data={RVSWI} min={5} max={10}>
+          <Calculated
+            data={RVSWI}
+            min={5}
+            max={10}
+            on:eq={() =>
+              (equation =
+                "\\text{RVSWI} = \\text{SVI}\\times(\\text{MAP} - \\text{CVP})\\times 0.0136")}
+          >
             Right ventricular stroke work index (RVSWI):
           </Calculated>
         </div>
