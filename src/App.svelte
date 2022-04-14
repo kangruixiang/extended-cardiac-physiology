@@ -77,9 +77,9 @@
       >
         <h2>Extended Cardiac Physiology</h2>
         <div
-          class="w-full px-4 py-2 my-2 font-serif text-sm rounded-md bg-zinc-100"
+          class="flex items-center justify-center w-full h-20 px-4 py-2 my-2 font-serif text-sm rounded-md bg-zinc-100"
         >
-          {@html katexString}
+          <div>{@html katexString}</div>
         </div>
         <div class="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 gap-x-10">
           <Calculated
@@ -112,15 +112,6 @@
                 "\\text{CPO}=\\frac{\\text{MAP}\\times \\text{CO}}{451}")}
             >Cardiac power output (CPO):</Calculated
           >
-
-          <Calculated
-            data={PAPI}
-            on:eq={() =>
-              (equation =
-                "\\text{PAPI} = \\frac{\\text{PASP} - \\text{PADP}}{\\text{CVP}}")}
-          >
-            Pulmonary artery pulsatile index (PAPI):
-          </Calculated>
 
           <Calculated
             data={SV}
@@ -208,6 +199,15 @@
           </Calculated>
 
           <Calculated
+            data={PAPI}
+            on:eq={() =>
+              (equation =
+                "\\text{PAPI} = \\frac{\\text{PASP} - \\text{PADP}}{\\text{CVP}}")}
+          >
+            Pulmonary artery pulsatile index (PAPI):
+          </Calculated>
+
+          <Calculated
             data={LVSW}
             min={58}
             max={104}
@@ -235,7 +235,7 @@
             max={16}
             on:eq={() =>
               (equation =
-                "\\text{RVSW} = \\text{SV}\\times(\\text{MAPA} - \\text{CVP})\\times 0.0136")}
+                "\\text{RVSW} = \\text{SV}\\times(\\text{MPAP} - \\text{CVP})\\times 0.0136")}
           >
             Right ventricular stroke work (RVSW):
           </Calculated>
@@ -246,7 +246,7 @@
             max={10}
             on:eq={() =>
               (equation =
-                "\\text{RVSWI} = \\text{SVI}\\times(\\text{MAP} - \\text{CVP})\\times 0.0136")}
+                "\\text{RVSWI} = \\text{SVI}\\times(\\text{MPAP} - \\text{CVP})\\times 0.0136")}
           >
             Right ventricular stroke work index (RVSWI):
           </Calculated>

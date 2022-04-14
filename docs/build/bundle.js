@@ -19072,35 +19072,8 @@ var app = (function () {
     	return block;
     }
 
-    // (116:10) <Calculated             data={PAPI}             on:eq={() =>               (equation =                 "\\text{PAPI} = \\frac{\\text{PASP} - \\text{PADP}}{\\text{CVP}}")}           >
+    // (116:10) <Calculated             data={SV}             min={60}             max={100}             on:eq={() =>               (equation =                 "\\text{SV}=\\frac{\\text{CO}\\times\\text{HR}}{1000}")}           >
     function create_default_slot_29(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text$2("Pulmonary artery pulsatile index (PAPI):");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_29.name,
-    		type: "slot",
-    		source: "(116:10) <Calculated             data={PAPI}             on:eq={() =>               (equation =                 \\\"\\\\text{PAPI} = \\\\frac{\\\\text{PASP} - \\\\text{PADP}}{\\\\text{CVP}}\\\")}           >",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (125:10) <Calculated             data={SV}             min={60}             max={100}             on:eq={() =>               (equation =                 "\\text{SV}=\\frac{\\text{CO}\\times\\text{HR}}{1000}")}           >
-    function create_default_slot_28(ctx) {
     	let t;
 
     	const block = {
@@ -19117,17 +19090,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_28.name,
+    		id: create_default_slot_29.name,
     		type: "slot",
-    		source: "(125:10) <Calculated             data={SV}             min={60}             max={100}             on:eq={() =>               (equation =                 \\\"\\\\text{SV}=\\\\frac{\\\\text{CO}\\\\times\\\\text{HR}}{1000}\\\")}           >",
+    		source: "(116:10) <Calculated             data={SV}             min={60}             max={100}             on:eq={() =>               (equation =                 \\\"\\\\text{SV}=\\\\frac{\\\\text{CO}\\\\times\\\\text{HR}}{1000}\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (136:10) <Calculated             data={SVI}             min={33}             max={47}             on:eq={() =>               (equation =                 "\\text{SV}=\\frac{\\text{CI}\\times\\text{HR}}{1000}")}             >
-    function create_default_slot_27(ctx) {
+    // (127:10) <Calculated             data={SVI}             min={33}             max={47}             on:eq={() =>               (equation =                 "\\text{SV}=\\frac{\\text{CI}\\times\\text{HR}}{1000}")}             >
+    function create_default_slot_28(ctx) {
     	let t;
 
     	const block = {
@@ -19144,17 +19117,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_27.name,
+    		id: create_default_slot_28.name,
     		type: "slot",
-    		source: "(136:10) <Calculated             data={SVI}             min={33}             max={47}             on:eq={() =>               (equation =                 \\\"\\\\text{SV}=\\\\frac{\\\\text{CI}\\\\times\\\\text{HR}}{1000}\\\")}             >",
+    		source: "(127:10) <Calculated             data={SVI}             min={33}             max={47}             on:eq={() =>               (equation =                 \\\"\\\\text{SV}=\\\\frac{\\\\text{CI}\\\\times\\\\text{HR}}{1000}\\\")}             >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (146:10) <Calculated             data={MAP}             min={70}             max={105}             on:eq={() =>               (equation =                 "\\text{MAP} = \\frac{\\text{SBP} + 2\\times \\text{DBP}}{3}\\,(70-105\\,mmHg)")}             >
-    function create_default_slot_26(ctx) {
+    // (137:10) <Calculated             data={MAP}             min={70}             max={105}             on:eq={() =>               (equation =                 "\\text{MAP} = \\frac{\\text{SBP} + 2\\times \\text{DBP}}{3}\\,(70-105\\,mmHg)")}             >
+    function create_default_slot_27(ctx) {
     	let t;
 
     	const block = {
@@ -19171,17 +19144,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_26.name,
+    		id: create_default_slot_27.name,
     		type: "slot",
-    		source: "(146:10) <Calculated             data={MAP}             min={70}             max={105}             on:eq={() =>               (equation =                 \\\"\\\\text{MAP} = \\\\frac{\\\\text{SBP} + 2\\\\times \\\\text{DBP}}{3}\\\\,(70-105\\\\,mmHg)\\\")}             >",
+    		source: "(137:10) <Calculated             data={MAP}             min={70}             max={105}             on:eq={() =>               (equation =                 \\\"\\\\text{MAP} = \\\\frac{\\\\text{SBP} + 2\\\\times \\\\text{DBP}}{3}\\\\,(70-105\\\\,mmHg)\\\")}             >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (156:10) <Calculated             data={SVR}             min={900}             max={1440}             on:eq={() =>               (equation =                 "\\text{SVR} = \\frac{80\\times(\\text{MAP} - \\text{CVP})}{3}\\,(70-105\\,mmHg)")}           >
-    function create_default_slot_25(ctx) {
+    // (147:10) <Calculated             data={SVR}             min={900}             max={1440}             on:eq={() =>               (equation =                 "\\text{SVR} = \\frac{80\\times(\\text{MAP} - \\text{CVP})}{3}\\,(70-105\\,mmHg)")}           >
+    function create_default_slot_26(ctx) {
     	let t;
 
     	const block = {
@@ -19198,17 +19171,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_25.name,
+    		id: create_default_slot_26.name,
     		type: "slot",
-    		source: "(156:10) <Calculated             data={SVR}             min={900}             max={1440}             on:eq={() =>               (equation =                 \\\"\\\\text{SVR} = \\\\frac{80\\\\times(\\\\text{MAP} - \\\\text{CVP})}{3}\\\\,(70-105\\\\,mmHg)\\\")}           >",
+    		source: "(147:10) <Calculated             data={SVR}             min={900}             max={1440}             on:eq={() =>               (equation =                 \\\"\\\\text{SVR} = \\\\frac{80\\\\times(\\\\text{MAP} - \\\\text{CVP})}{3}\\\\,(70-105\\\\,mmHg)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (167:10) <Calculated             data={SVRI}             min={1970}             max={2390}             on:eq={() =>               (equation =                 "\\text{SVRI} = \\frac{80\\times (\\text{MAP} - \\text{CVP})}{CI}\\,1970 – 2390\\,dynes · sec/cm^5/m^2")}           >
-    function create_default_slot_24(ctx) {
+    // (158:10) <Calculated             data={SVRI}             min={1970}             max={2390}             on:eq={() =>               (equation =                 "\\text{SVRI} = \\frac{80\\times (\\text{MAP} - \\text{CVP})}{CI}\\,1970 – 2390\\,dynes · sec/cm^5/m^2")}           >
+    function create_default_slot_25(ctx) {
     	let t;
 
     	const block = {
@@ -19225,17 +19198,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_24.name,
+    		id: create_default_slot_25.name,
     		type: "slot",
-    		source: "(167:10) <Calculated             data={SVRI}             min={1970}             max={2390}             on:eq={() =>               (equation =                 \\\"\\\\text{SVRI} = \\\\frac{80\\\\times (\\\\text{MAP} - \\\\text{CVP})}{CI}\\\\,1970 – 2390\\\\,dynes · sec/cm^5/m^2\\\")}           >",
+    		source: "(158:10) <Calculated             data={SVRI}             min={1970}             max={2390}             on:eq={() =>               (equation =                 \\\"\\\\text{SVRI} = \\\\frac{80\\\\times (\\\\text{MAP} - \\\\text{CVP})}{CI}\\\\,1970 – 2390\\\\,dynes · sec/cm^5/m^2\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (178:10) <Calculated             data={MPAP}             min={10}             max={20}             on:eq={() =>               (equation =                 "\\text{MPAP} = \\frac{\\text{PASP} + 2\\times \\text{PADP}}{3}\\,(10-20\\,mmHg)")}           >
-    function create_default_slot_23(ctx) {
+    // (169:10) <Calculated             data={MPAP}             min={10}             max={20}             on:eq={() =>               (equation =                 "\\text{MPAP} = \\frac{\\text{PASP} + 2\\times \\text{PADP}}{3}\\,(10-20\\,mmHg)")}           >
+    function create_default_slot_24(ctx) {
     	let t;
 
     	const block = {
@@ -19252,17 +19225,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_23.name,
+    		id: create_default_slot_24.name,
     		type: "slot",
-    		source: "(178:10) <Calculated             data={MPAP}             min={10}             max={20}             on:eq={() =>               (equation =                 \\\"\\\\text{MPAP} = \\\\frac{\\\\text{PASP} + 2\\\\times \\\\text{PADP}}{3}\\\\,(10-20\\\\,mmHg)\\\")}           >",
+    		source: "(169:10) <Calculated             data={MPAP}             min={10}             max={20}             on:eq={() =>               (equation =                 \\\"\\\\text{MPAP} = \\\\frac{\\\\text{PASP} + 2\\\\times \\\\text{PADP}}{3}\\\\,(10-20\\\\,mmHg)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (189:10) <Calculated             data={PVR}             max={250}             on:eq={() =>               (equation =                 "\\text{PVR} = \\frac{80\\times(\\text{MPAP} - \\text{PAWP})}{3}\\,(<250\\,mmHg)")}           >
-    function create_default_slot_22(ctx) {
+    // (180:10) <Calculated             data={PVR}             max={250}             on:eq={() =>               (equation =                 "\\text{PVR} = \\frac{80\\times(\\text{MPAP} - \\text{PAWP})}{3}\\,(<250\\,mmHg)")}           >
+    function create_default_slot_23(ctx) {
     	let t;
 
     	const block = {
@@ -19279,17 +19252,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_22.name,
+    		id: create_default_slot_23.name,
     		type: "slot",
-    		source: "(189:10) <Calculated             data={PVR}             max={250}             on:eq={() =>               (equation =                 \\\"\\\\text{PVR} = \\\\frac{80\\\\times(\\\\text{MPAP} - \\\\text{PAWP})}{3}\\\\,(<250\\\\,mmHg)\\\")}           >",
+    		source: "(180:10) <Calculated             data={PVR}             max={250}             on:eq={() =>               (equation =                 \\\"\\\\text{PVR} = \\\\frac{80\\\\times(\\\\text{MPAP} - \\\\text{PAWP})}{3}\\\\,(<250\\\\,mmHg)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (199:10) <Calculated             data={PVRI}             min={255}             max={285}             on:eq={() =>               (equation =                 "\\text{PVRI} = \\frac{80\\times(\\text{MPAP} - \\text{PAWP})}{3}\\,(255-285\\,mmHg)")}           >
-    function create_default_slot_21(ctx) {
+    // (190:10) <Calculated             data={PVRI}             min={255}             max={285}             on:eq={() =>               (equation =                 "\\text{PVRI} = \\frac{80\\times(\\text{MPAP} - \\text{PAWP})}{3}\\,(255-285\\,mmHg)")}           >
+    function create_default_slot_22(ctx) {
     	let t;
 
     	const block = {
@@ -19306,9 +19279,36 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
+    		id: create_default_slot_22.name,
+    		type: "slot",
+    		source: "(190:10) <Calculated             data={PVRI}             min={255}             max={285}             on:eq={() =>               (equation =                 \\\"\\\\text{PVRI} = \\\\frac{80\\\\times(\\\\text{MPAP} - \\\\text{PAWP})}{3}\\\\,(255-285\\\\,mmHg)\\\")}           >",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (201:10) <Calculated             data={PAPI}             on:eq={() =>               (equation =                 "\\text{PAPI} = \\frac{\\text{PASP} - \\text{PADP}}{\\text{CVP}}")}           >
+    function create_default_slot_21(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text$2("Pulmonary artery pulsatile index (PAPI):");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
     		id: create_default_slot_21.name,
     		type: "slot",
-    		source: "(199:10) <Calculated             data={PVRI}             min={255}             max={285}             on:eq={() =>               (equation =                 \\\"\\\\text{PVRI} = \\\\frac{80\\\\times(\\\\text{MPAP} - \\\\text{PAWP})}{3}\\\\,(255-285\\\\,mmHg)\\\")}           >",
+    		source: "(201:10) <Calculated             data={PAPI}             on:eq={() =>               (equation =                 \\\"\\\\text{PAPI} = \\\\frac{\\\\text{PASP} - \\\\text{PADP}}{\\\\text{CVP}}\\\")}           >",
     		ctx
     	});
 
@@ -19369,7 +19369,7 @@ var app = (function () {
     	return block;
     }
 
-    // (232:10) <Calculated             data={RVSW}             min={8}             max={16}             on:eq={() =>               (equation =                 "\\text{RVSW} = \\text{SV}\\times(\\text{MAPA} - \\text{CVP})\\times 0.0136")}           >
+    // (232:10) <Calculated             data={RVSW}             min={8}             max={16}             on:eq={() =>               (equation =                 "\\text{RVSW} = \\text{SV}\\times(\\text{MPAP} - \\text{CVP})\\times 0.0136")}           >
     function create_default_slot_18(ctx) {
     	let t;
 
@@ -19389,14 +19389,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_18.name,
     		type: "slot",
-    		source: "(232:10) <Calculated             data={RVSW}             min={8}             max={16}             on:eq={() =>               (equation =                 \\\"\\\\text{RVSW} = \\\\text{SV}\\\\times(\\\\text{MAPA} - \\\\text{CVP})\\\\times 0.0136\\\")}           >",
+    		source: "(232:10) <Calculated             data={RVSW}             min={8}             max={16}             on:eq={() =>               (equation =                 \\\"\\\\text{RVSW} = \\\\text{SV}\\\\times(\\\\text{MPAP} - \\\\text{CVP})\\\\times 0.0136\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (243:10) <Calculated             data={RVSWI}             min={5}             max={10}             on:eq={() =>               (equation =                 "\\text{RVSWI} = \\text{SVI}\\times(\\text{MAP} - \\text{CVP})\\times 0.0136")}           >
+    // (243:10) <Calculated             data={RVSWI}             min={5}             max={10}             on:eq={() =>               (equation =                 "\\text{RVSWI} = \\text{SVI}\\times(\\text{MPAP} - \\text{CVP})\\times 0.0136")}           >
     function create_default_slot_17(ctx) {
     	let t;
 
@@ -19416,7 +19416,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_17.name,
     		type: "slot",
-    		source: "(243:10) <Calculated             data={RVSWI}             min={5}             max={10}             on:eq={() =>               (equation =                 \\\"\\\\text{RVSWI} = \\\\text{SVI}\\\\times(\\\\text{MAP} - \\\\text{CVP})\\\\times 0.0136\\\")}           >",
+    		source: "(243:10) <Calculated             data={RVSWI}             min={5}             max={10}             on:eq={() =>               (equation =                 \\\"\\\\text{RVSWI} = \\\\text{SVI}\\\\times(\\\\text{MPAP} - \\\\text{CVP})\\\\times 0.0136\\\")}           >",
     		ctx
     	});
 
@@ -19930,14 +19930,15 @@ var app = (function () {
     	let link;
     	let t0;
     	let main;
+    	let div7;
     	let div6;
-    	let div5;
-    	let div2;
+    	let div3;
     	let h2;
     	let t2;
+    	let div1;
     	let div0;
     	let t3;
-    	let div1;
+    	let div2;
     	let calculated0;
     	let t4;
     	let calculated1;
@@ -19970,7 +19971,7 @@ var app = (function () {
     	let t18;
     	let calculated15;
     	let t19;
-    	let div3;
+    	let div4;
     	let dynamic0;
     	let updating_result;
     	let t20;
@@ -20022,7 +20023,7 @@ var app = (function () {
     	let dynamic16;
     	let updating_result_16;
     	let t36;
-    	let div4;
+    	let div5;
     	let t37;
     	let a;
     	let t39;
@@ -20067,7 +20068,9 @@ var app = (function () {
 
     	calculated3 = new Calculated({
     			props: {
-    				data: /*PAPI*/ ctx[29],
+    				data: /*SV*/ ctx[2],
+    				min: 60,
+    				max: 100,
     				$$slots: { default: [create_default_slot_29] },
     				$$scope: { ctx }
     			},
@@ -20078,9 +20081,9 @@ var app = (function () {
 
     	calculated4 = new Calculated({
     			props: {
-    				data: /*SV*/ ctx[2],
-    				min: 60,
-    				max: 100,
+    				data: /*SVI*/ ctx[18],
+    				min: 33,
+    				max: 47,
     				$$slots: { default: [create_default_slot_28] },
     				$$scope: { ctx }
     			},
@@ -20091,9 +20094,9 @@ var app = (function () {
 
     	calculated5 = new Calculated({
     			props: {
-    				data: /*SVI*/ ctx[18],
-    				min: 33,
-    				max: 47,
+    				data: /*MAP*/ ctx[0],
+    				min: 70,
+    				max: 105,
     				$$slots: { default: [create_default_slot_27] },
     				$$scope: { ctx }
     			},
@@ -20104,9 +20107,9 @@ var app = (function () {
 
     	calculated6 = new Calculated({
     			props: {
-    				data: /*MAP*/ ctx[0],
-    				min: 70,
-    				max: 105,
+    				data: /*SVR*/ ctx[33],
+    				min: 900,
+    				max: 1440,
     				$$slots: { default: [create_default_slot_26] },
     				$$scope: { ctx }
     			},
@@ -20117,9 +20120,9 @@ var app = (function () {
 
     	calculated7 = new Calculated({
     			props: {
-    				data: /*SVR*/ ctx[33],
-    				min: 900,
-    				max: 1440,
+    				data: /*SVRI*/ ctx[32],
+    				min: 1970,
+    				max: 2390,
     				$$slots: { default: [create_default_slot_25] },
     				$$scope: { ctx }
     			},
@@ -20130,9 +20133,9 @@ var app = (function () {
 
     	calculated8 = new Calculated({
     			props: {
-    				data: /*SVRI*/ ctx[32],
-    				min: 1970,
-    				max: 2390,
+    				data: /*MPAP*/ ctx[17],
+    				min: 10,
+    				max: 20,
     				$$slots: { default: [create_default_slot_24] },
     				$$scope: { ctx }
     			},
@@ -20143,9 +20146,8 @@ var app = (function () {
 
     	calculated9 = new Calculated({
     			props: {
-    				data: /*MPAP*/ ctx[17],
-    				min: 10,
-    				max: 20,
+    				data: /*PVR*/ ctx[31],
+    				max: 250,
     				$$slots: { default: [create_default_slot_23] },
     				$$scope: { ctx }
     			},
@@ -20156,8 +20158,9 @@ var app = (function () {
 
     	calculated10 = new Calculated({
     			props: {
-    				data: /*PVR*/ ctx[31],
-    				max: 250,
+    				data: /*PVRI*/ ctx[30],
+    				min: 255,
+    				max: 285,
     				$$slots: { default: [create_default_slot_22] },
     				$$scope: { ctx }
     			},
@@ -20168,9 +20171,7 @@ var app = (function () {
 
     	calculated11 = new Calculated({
     			props: {
-    				data: /*PVRI*/ ctx[30],
-    				min: 255,
-    				max: 285,
+    				data: /*PAPI*/ ctx[29],
     				$$slots: { default: [create_default_slot_21] },
     				$$scope: { ctx }
     			},
@@ -20544,15 +20545,16 @@ var app = (function () {
     			link = element("link");
     			t0 = space();
     			main = element("main");
+    			div7 = element("div");
     			div6 = element("div");
-    			div5 = element("div");
-    			div2 = element("div");
+    			div3 = element("div");
     			h2 = element("h2");
     			h2.textContent = "Extended Cardiac Physiology";
     			t2 = space();
+    			div1 = element("div");
     			div0 = element("div");
     			t3 = space();
-    			div1 = element("div");
+    			div2 = element("div");
     			create_component(calculated0.$$.fragment);
     			t4 = space();
     			create_component(calculated1.$$.fragment);
@@ -20585,7 +20587,7 @@ var app = (function () {
     			t18 = space();
     			create_component(calculated15.$$.fragment);
     			t19 = space();
-    			div3 = element("div");
+    			div4 = element("div");
     			create_component(dynamic0.$$.fragment);
     			t20 = space();
     			create_component(dynamic1.$$.fragment);
@@ -20620,7 +20622,7 @@ var app = (function () {
     			t35 = space();
     			create_component(dynamic16.$$.fragment);
     			t36 = space();
-    			div4 = element("div");
+    			div5 = element("div");
     			t37 = text$2("Email me at ");
     			a = element("a");
     			a.textContent = "kangruixiang@gmail.com";
@@ -20631,23 +20633,24 @@ var app = (function () {
     			attr_dev(link, "crossorigin", "anonymous");
     			add_location(link, file, 59, 2, 1712);
     			add_location(h2, file, 77, 8, 2319);
-    			attr_dev(div0, "class", "w-full px-4 py-2 my-2 font-serif text-sm rounded-md bg-zinc-100");
-    			add_location(div0, file, 78, 8, 2364);
-    			attr_dev(div1, "class", "grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 gap-x-10");
-    			add_location(div1, file, 83, 8, 2514);
-    			attr_dev(div2, "class", "py-4 overflow-y-auto border-b h-2/5 md:h-auto md:mb-12 top border-zinc-400");
-    			add_location(div2, file, 74, 6, 2207);
-    			attr_dev(div3, "class", "grid grid-cols-1 mt-4 overflow-y-auto h-3/5 md:h-auto md:mt-4 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-2 bottom");
-    			add_location(div3, file, 254, 6, 7603);
+    			add_location(div0, file, 81, 10, 2509);
+    			attr_dev(div1, "class", "flex items-center justify-center w-full h-20 px-4 py-2 my-2 font-serif text-sm rounded-md bg-zinc-100");
+    			add_location(div1, file, 78, 8, 2364);
+    			attr_dev(div2, "class", "grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 gap-x-10");
+    			add_location(div2, file, 83, 8, 2563);
+    			attr_dev(div3, "class", "py-4 overflow-y-auto border-b h-2/5 md:h-auto md:mb-12 top border-zinc-400");
+    			add_location(div3, file, 74, 6, 2207);
+    			attr_dev(div4, "class", "grid grid-cols-1 mt-4 overflow-y-auto h-3/5 md:h-auto md:mt-4 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-2 bottom");
+    			add_location(div4, file, 254, 6, 7653);
     			attr_dev(a, "class", "font-sans hover:underline");
     			attr_dev(a, "href", "mailto:kangruixiang@gmail.com");
-    			add_location(a, file, 326, 20, 9784);
-    			attr_dev(div4, "class", "text-sm font-semibold text-center md:mt-12");
-    			add_location(div4, file, 325, 6, 9707);
-    			attr_dev(div5, "class", "flex flex-col w-full px-2 my-2 rounded-lg lg:px-24 lg:my-12 lg:pt-24 lg:pb-12 lg:border-2 lg:border-solid lg:border-zinc-900");
-    			add_location(div5, file, 71, 4, 2051);
-    			attr_dev(div6, "class", "container flex justify-center w-full h-screen align-middle md:h-auto");
-    			add_location(div6, file, 68, 2, 1957);
+    			add_location(a, file, 326, 20, 9834);
+    			attr_dev(div5, "class", "text-sm font-semibold text-center md:mt-12");
+    			add_location(div5, file, 325, 6, 9757);
+    			attr_dev(div6, "class", "flex flex-col w-full px-2 my-2 rounded-lg lg:px-24 lg:my-12 lg:pt-24 lg:pb-12 lg:border-2 lg:border-solid lg:border-zinc-900");
+    			add_location(div6, file, 71, 4, 2051);
+    			attr_dev(div7, "class", "container flex justify-center w-full h-screen align-middle md:h-auto");
+    			add_location(div7, file, 68, 2, 1957);
     			add_location(main, file, 67, 0, 1948);
     		},
     		l: function claim(nodes) {
@@ -20657,86 +20660,87 @@ var app = (function () {
     			append_dev(document.head, link);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, main, anchor);
-    			append_dev(main, div6);
-    			append_dev(div6, div5);
-    			append_dev(div5, div2);
-    			append_dev(div2, h2);
-    			append_dev(div2, t2);
-    			append_dev(div2, div0);
+    			append_dev(main, div7);
+    			append_dev(div7, div6);
+    			append_dev(div6, div3);
+    			append_dev(div3, h2);
+    			append_dev(div3, t2);
+    			append_dev(div3, div1);
+    			append_dev(div1, div0);
     			div0.innerHTML = /*katexString*/ ctx[24];
-    			append_dev(div2, t3);
-    			append_dev(div2, div1);
-    			mount_component(calculated0, div1, null);
-    			append_dev(div1, t4);
-    			mount_component(calculated1, div1, null);
-    			append_dev(div1, t5);
-    			mount_component(calculated2, div1, null);
-    			append_dev(div1, t6);
-    			mount_component(calculated3, div1, null);
-    			append_dev(div1, t7);
-    			mount_component(calculated4, div1, null);
-    			append_dev(div1, t8);
-    			mount_component(calculated5, div1, null);
-    			append_dev(div1, t9);
-    			mount_component(calculated6, div1, null);
-    			append_dev(div1, t10);
-    			mount_component(calculated7, div1, null);
-    			append_dev(div1, t11);
-    			mount_component(calculated8, div1, null);
-    			append_dev(div1, t12);
-    			mount_component(calculated9, div1, null);
-    			append_dev(div1, t13);
-    			mount_component(calculated10, div1, null);
-    			append_dev(div1, t14);
-    			mount_component(calculated11, div1, null);
-    			append_dev(div1, t15);
-    			mount_component(calculated12, div1, null);
-    			append_dev(div1, t16);
-    			mount_component(calculated13, div1, null);
-    			append_dev(div1, t17);
-    			mount_component(calculated14, div1, null);
-    			append_dev(div1, t18);
-    			mount_component(calculated15, div1, null);
-    			append_dev(div5, t19);
-    			append_dev(div5, div3);
-    			mount_component(dynamic0, div3, null);
-    			append_dev(div3, t20);
-    			mount_component(dynamic1, div3, null);
-    			append_dev(div3, t21);
-    			mount_component(dynamic2, div3, null);
-    			append_dev(div3, t22);
-    			mount_component(dynamic3, div3, null);
-    			append_dev(div3, t23);
-    			mount_component(dynamic4, div3, null);
-    			append_dev(div3, t24);
-    			mount_component(dynamic5, div3, null);
-    			append_dev(div3, t25);
-    			mount_component(dynamic6, div3, null);
-    			append_dev(div3, t26);
-    			mount_component(dynamic7, div3, null);
-    			append_dev(div3, t27);
-    			mount_component(dynamic8, div3, null);
-    			append_dev(div3, t28);
-    			mount_component(dynamic9, div3, null);
-    			append_dev(div3, t29);
-    			mount_component(dynamic10, div3, null);
-    			append_dev(div3, t30);
-    			mount_component(dynamic11, div3, null);
-    			append_dev(div3, t31);
-    			mount_component(dynamic12, div3, null);
-    			append_dev(div3, t32);
-    			mount_component(dynamic13, div3, null);
-    			append_dev(div3, t33);
-    			mount_component(dynamic14, div3, null);
-    			append_dev(div3, t34);
-    			mount_component(dynamic15, div3, null);
-    			append_dev(div3, t35);
-    			mount_component(dynamic16, div3, null);
-    			append_dev(div5, t36);
-    			append_dev(div5, div4);
-    			append_dev(div4, t37);
-    			append_dev(div4, a);
-    			append_dev(div4, t39);
+    			append_dev(div3, t3);
+    			append_dev(div3, div2);
+    			mount_component(calculated0, div2, null);
+    			append_dev(div2, t4);
+    			mount_component(calculated1, div2, null);
+    			append_dev(div2, t5);
+    			mount_component(calculated2, div2, null);
+    			append_dev(div2, t6);
+    			mount_component(calculated3, div2, null);
+    			append_dev(div2, t7);
+    			mount_component(calculated4, div2, null);
+    			append_dev(div2, t8);
+    			mount_component(calculated5, div2, null);
+    			append_dev(div2, t9);
+    			mount_component(calculated6, div2, null);
+    			append_dev(div2, t10);
+    			mount_component(calculated7, div2, null);
+    			append_dev(div2, t11);
+    			mount_component(calculated8, div2, null);
+    			append_dev(div2, t12);
+    			mount_component(calculated9, div2, null);
+    			append_dev(div2, t13);
+    			mount_component(calculated10, div2, null);
+    			append_dev(div2, t14);
+    			mount_component(calculated11, div2, null);
+    			append_dev(div2, t15);
+    			mount_component(calculated12, div2, null);
+    			append_dev(div2, t16);
+    			mount_component(calculated13, div2, null);
+    			append_dev(div2, t17);
+    			mount_component(calculated14, div2, null);
+    			append_dev(div2, t18);
+    			mount_component(calculated15, div2, null);
+    			append_dev(div6, t19);
+    			append_dev(div6, div4);
+    			mount_component(dynamic0, div4, null);
+    			append_dev(div4, t20);
+    			mount_component(dynamic1, div4, null);
+    			append_dev(div4, t21);
+    			mount_component(dynamic2, div4, null);
+    			append_dev(div4, t22);
+    			mount_component(dynamic3, div4, null);
+    			append_dev(div4, t23);
+    			mount_component(dynamic4, div4, null);
+    			append_dev(div4, t24);
+    			mount_component(dynamic5, div4, null);
+    			append_dev(div4, t25);
+    			mount_component(dynamic6, div4, null);
+    			append_dev(div4, t26);
+    			mount_component(dynamic7, div4, null);
+    			append_dev(div4, t27);
+    			mount_component(dynamic8, div4, null);
+    			append_dev(div4, t28);
+    			mount_component(dynamic9, div4, null);
+    			append_dev(div4, t29);
+    			mount_component(dynamic10, div4, null);
+    			append_dev(div4, t30);
+    			mount_component(dynamic11, div4, null);
+    			append_dev(div4, t31);
+    			mount_component(dynamic12, div4, null);
+    			append_dev(div4, t32);
+    			mount_component(dynamic13, div4, null);
+    			append_dev(div4, t33);
+    			mount_component(dynamic14, div4, null);
+    			append_dev(div4, t34);
+    			mount_component(dynamic15, div4, null);
+    			append_dev(div4, t35);
+    			mount_component(dynamic16, div4, null);
+    			append_dev(div6, t36);
+    			append_dev(div6, div5);
+    			append_dev(div5, t37);
+    			append_dev(div5, a);
+    			append_dev(div5, t39);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
@@ -20765,7 +20769,7 @@ var app = (function () {
 
     			calculated2.$set(calculated2_changes);
     			const calculated3_changes = {};
-    			if (dirty[0] & /*PAPI*/ 536870912) calculated3_changes.data = /*PAPI*/ ctx[29];
+    			if (dirty[0] & /*SV*/ 4) calculated3_changes.data = /*SV*/ ctx[2];
 
     			if (dirty[2] & /*$$scope*/ 4096) {
     				calculated3_changes.$$scope = { dirty, ctx };
@@ -20773,7 +20777,7 @@ var app = (function () {
 
     			calculated3.$set(calculated3_changes);
     			const calculated4_changes = {};
-    			if (dirty[0] & /*SV*/ 4) calculated4_changes.data = /*SV*/ ctx[2];
+    			if (dirty[0] & /*SVI*/ 262144) calculated4_changes.data = /*SVI*/ ctx[18];
 
     			if (dirty[2] & /*$$scope*/ 4096) {
     				calculated4_changes.$$scope = { dirty, ctx };
@@ -20781,7 +20785,7 @@ var app = (function () {
 
     			calculated4.$set(calculated4_changes);
     			const calculated5_changes = {};
-    			if (dirty[0] & /*SVI*/ 262144) calculated5_changes.data = /*SVI*/ ctx[18];
+    			if (dirty[0] & /*MAP*/ 1) calculated5_changes.data = /*MAP*/ ctx[0];
 
     			if (dirty[2] & /*$$scope*/ 4096) {
     				calculated5_changes.$$scope = { dirty, ctx };
@@ -20789,7 +20793,7 @@ var app = (function () {
 
     			calculated5.$set(calculated5_changes);
     			const calculated6_changes = {};
-    			if (dirty[0] & /*MAP*/ 1) calculated6_changes.data = /*MAP*/ ctx[0];
+    			if (dirty[1] & /*SVR*/ 4) calculated6_changes.data = /*SVR*/ ctx[33];
 
     			if (dirty[2] & /*$$scope*/ 4096) {
     				calculated6_changes.$$scope = { dirty, ctx };
@@ -20797,7 +20801,7 @@ var app = (function () {
 
     			calculated6.$set(calculated6_changes);
     			const calculated7_changes = {};
-    			if (dirty[1] & /*SVR*/ 4) calculated7_changes.data = /*SVR*/ ctx[33];
+    			if (dirty[1] & /*SVRI*/ 2) calculated7_changes.data = /*SVRI*/ ctx[32];
 
     			if (dirty[2] & /*$$scope*/ 4096) {
     				calculated7_changes.$$scope = { dirty, ctx };
@@ -20805,7 +20809,7 @@ var app = (function () {
 
     			calculated7.$set(calculated7_changes);
     			const calculated8_changes = {};
-    			if (dirty[1] & /*SVRI*/ 2) calculated8_changes.data = /*SVRI*/ ctx[32];
+    			if (dirty[0] & /*MPAP*/ 131072) calculated8_changes.data = /*MPAP*/ ctx[17];
 
     			if (dirty[2] & /*$$scope*/ 4096) {
     				calculated8_changes.$$scope = { dirty, ctx };
@@ -20813,7 +20817,7 @@ var app = (function () {
 
     			calculated8.$set(calculated8_changes);
     			const calculated9_changes = {};
-    			if (dirty[0] & /*MPAP*/ 131072) calculated9_changes.data = /*MPAP*/ ctx[17];
+    			if (dirty[1] & /*PVR*/ 1) calculated9_changes.data = /*PVR*/ ctx[31];
 
     			if (dirty[2] & /*$$scope*/ 4096) {
     				calculated9_changes.$$scope = { dirty, ctx };
@@ -20821,7 +20825,7 @@ var app = (function () {
 
     			calculated9.$set(calculated9_changes);
     			const calculated10_changes = {};
-    			if (dirty[1] & /*PVR*/ 1) calculated10_changes.data = /*PVR*/ ctx[31];
+    			if (dirty[0] & /*PVRI*/ 1073741824) calculated10_changes.data = /*PVRI*/ ctx[30];
 
     			if (dirty[2] & /*$$scope*/ 4096) {
     				calculated10_changes.$$scope = { dirty, ctx };
@@ -20829,7 +20833,7 @@ var app = (function () {
 
     			calculated10.$set(calculated10_changes);
     			const calculated11_changes = {};
-    			if (dirty[0] & /*PVRI*/ 1073741824) calculated11_changes.data = /*PVRI*/ ctx[30];
+    			if (dirty[0] & /*PAPI*/ 536870912) calculated11_changes.data = /*PAPI*/ ctx[29];
 
     			if (dirty[2] & /*$$scope*/ 4096) {
     				calculated11_changes.$$scope = { dirty, ctx };
@@ -21264,19 +21268,19 @@ var app = (function () {
     	};
 
     	const eq_handler_2 = () => $$invalidate(16, equation = "\\text{CPO}=\\frac{\\text{MAP}\\times \\text{CO}}{451}");
-    	const eq_handler_3 = () => $$invalidate(16, equation = "\\text{PAPI} = \\frac{\\text{PASP} - \\text{PADP}}{\\text{CVP}}");
-    	const eq_handler_4 = () => $$invalidate(16, equation = "\\text{SV}=\\frac{\\text{CO}\\times\\text{HR}}{1000}");
-    	const eq_handler_5 = () => $$invalidate(16, equation = "\\text{SV}=\\frac{\\text{CI}\\times\\text{HR}}{1000}");
-    	const eq_handler_6 = () => $$invalidate(16, equation = "\\text{MAP} = \\frac{\\text{SBP} + 2\\times \\text{DBP}}{3}\\,(70-105\\,mmHg)");
-    	const eq_handler_7 = () => $$invalidate(16, equation = "\\text{SVR} = \\frac{80\\times(\\text{MAP} - \\text{CVP})}{3}\\,(70-105\\,mmHg)");
-    	const eq_handler_8 = () => $$invalidate(16, equation = "\\text{SVRI} = \\frac{80\\times (\\text{MAP} - \\text{CVP})}{CI}\\,1970 – 2390\\,dynes · sec/cm^5/m^2");
-    	const eq_handler_9 = () => $$invalidate(16, equation = "\\text{MPAP} = \\frac{\\text{PASP} + 2\\times \\text{PADP}}{3}\\,(10-20\\,mmHg)");
-    	const eq_handler_10 = () => $$invalidate(16, equation = "\\text{PVR} = \\frac{80\\times(\\text{MPAP} - \\text{PAWP})}{3}\\,(<250\\,mmHg)");
-    	const eq_handler_11 = () => $$invalidate(16, equation = "\\text{PVRI} = \\frac{80\\times(\\text{MPAP} - \\text{PAWP})}{3}\\,(255-285\\,mmHg)");
+    	const eq_handler_3 = () => $$invalidate(16, equation = "\\text{SV}=\\frac{\\text{CO}\\times\\text{HR}}{1000}");
+    	const eq_handler_4 = () => $$invalidate(16, equation = "\\text{SV}=\\frac{\\text{CI}\\times\\text{HR}}{1000}");
+    	const eq_handler_5 = () => $$invalidate(16, equation = "\\text{MAP} = \\frac{\\text{SBP} + 2\\times \\text{DBP}}{3}\\,(70-105\\,mmHg)");
+    	const eq_handler_6 = () => $$invalidate(16, equation = "\\text{SVR} = \\frac{80\\times(\\text{MAP} - \\text{CVP})}{3}\\,(70-105\\,mmHg)");
+    	const eq_handler_7 = () => $$invalidate(16, equation = "\\text{SVRI} = \\frac{80\\times (\\text{MAP} - \\text{CVP})}{CI}\\,1970 – 2390\\,dynes · sec/cm^5/m^2");
+    	const eq_handler_8 = () => $$invalidate(16, equation = "\\text{MPAP} = \\frac{\\text{PASP} + 2\\times \\text{PADP}}{3}\\,(10-20\\,mmHg)");
+    	const eq_handler_9 = () => $$invalidate(16, equation = "\\text{PVR} = \\frac{80\\times(\\text{MPAP} - \\text{PAWP})}{3}\\,(<250\\,mmHg)");
+    	const eq_handler_10 = () => $$invalidate(16, equation = "\\text{PVRI} = \\frac{80\\times(\\text{MPAP} - \\text{PAWP})}{3}\\,(255-285\\,mmHg)");
+    	const eq_handler_11 = () => $$invalidate(16, equation = "\\text{PAPI} = \\frac{\\text{PASP} - \\text{PADP}}{\\text{CVP}}");
     	const eq_handler_12 = () => $$invalidate(16, equation = "\\text{LVSW} = \\text{SV}\\times(\\text{MAP} - \\text{PAWP})\\times 0.0136");
     	const eq_handler_13 = () => $$invalidate(16, equation = "\\text{LVSWI} = \\text{SVI}\\times(\\text{PAWP} - \\text{CVP})\\times 0.0136");
-    	const eq_handler_14 = () => $$invalidate(16, equation = "\\text{RVSW} = \\text{SV}\\times(\\text{MAPA} - \\text{CVP})\\times 0.0136");
-    	const eq_handler_15 = () => $$invalidate(16, equation = "\\text{RVSWI} = \\text{SVI}\\times(\\text{MAP} - \\text{CVP})\\times 0.0136");
+    	const eq_handler_14 = () => $$invalidate(16, equation = "\\text{RVSW} = \\text{SV}\\times(\\text{MPAP} - \\text{CVP})\\times 0.0136");
+    	const eq_handler_15 = () => $$invalidate(16, equation = "\\text{RVSWI} = \\text{SVI}\\times(\\text{MPAP} - \\text{CVP})\\times 0.0136");
 
     	function dynamic0_result_binding(value) {
     		LB = value;
