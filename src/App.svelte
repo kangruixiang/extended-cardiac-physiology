@@ -48,7 +48,7 @@
   $: RVSW = SV * (MPAP - CVP) * 0.0136;
   $: RVSWI = SVI * (MPAP - CVP) * 0.0136;
 
-  let equation = "CO = \\frac{HR\\times SV}{1000}\\, (4 - 8 L/min)";
+  let equation = "\\text{Click on a Variable Below To See Formula}";
 
   $: katexString = katex.renderToString(equation, {
     displayMode: true,
@@ -66,7 +66,9 @@
 </svelte:head>
 
 <main>
-  <div class="container flex justify-center h-screen align-middle md:h-auto">
+  <div
+    class="container flex justify-center w-full h-screen align-middle md:h-auto"
+  >
     <div
       class="flex flex-col w-full px-2 my-2 rounded-lg lg:px-24 lg:my-12 lg:pt-24 lg:pb-12 lg:border-2 lg:border-solid lg:border-zinc-900"
     >
@@ -75,7 +77,7 @@
       >
         <h2>Extended Cardiac Physiology</h2>
         <div
-          class="w-full px-4 py-2 my-2 overflow-x-auto rounded-md bg-zinc-100"
+          class="w-full px-4 py-2 my-2 font-serif text-sm rounded-md bg-zinc-100"
         >
           {@html katexString}
         </div>
@@ -86,7 +88,7 @@
             max={8}
             on:eq={() =>
               (equation =
-                "CO = \\frac{\\text{oxygen delivery}}{(S_aO_2 - S_vO_2)\\times 0.01\\times \\text{Hgb}\\times 13.4}\\,(4 - 8 L/min)")}
+                "CO = \\frac{O_2\\text{ delivery}}{(S_aO_2 - S_vO_2)\\times 0.01\\times \\text{Hgb}\\times 13.4}\\,(4 - 8 L/min)")}
           >
             Cardiac output (CO):
           </Calculated>
@@ -96,7 +98,8 @@
             min={2}
             max={4}
             on:eq={() => {
-              equation = "CI = \\frac{CO}{BSA}\\,(2 - 4 L/min/m^2)";
+              equation =
+                "CI = \\frac{CO}{\\text{body surface area}}\\,(2 - 4 L/min/m^2)";
             }}
           >
             Cardiac index (CI):
@@ -104,9 +107,7 @@
 
           <Calculated
             data={CPO}
-            on:eq={() =>
-              (equation =
-                "CPO=\\frac{\\text{mean artery pressure}\\times \\text{cardiac output}}{451}")}
+            on:eq={() => (equation = "CPO=\\frac{MAP\\times CO}{451}")}
             >Cardiac power output (CPO):</Calculated
           >
 
@@ -114,7 +115,7 @@
             data={PAPI}
             on:eq={() =>
               (equation =
-                "PAPI = \\frac{\\text{pulmonary artery systolic pressure} - \\text{pulmonary artery diastolic pressure}}{\\text{central venous pressure}}")}
+                "PAPI = \\frac{\\text{PASP} - \\text{PADP}}{\\text{CVP}}")}
           >
             Pulmonary artery pulsatile index (PAPI):
           </Calculated>
@@ -124,8 +125,7 @@
             min={60}
             max={100}
             on:eq={() =>
-              (equation =
-                "SV=\\frac{\\text{cardiac output}\\times\\text{heart rate}}{1000}")}
+              (equation = "SV=\\frac{\\text{CO}\\times\\text{HR}}{1000}")}
           >
             Stroke volume (SV):</Calculated
           >
@@ -135,8 +135,7 @@
             min={33}
             max={47}
             on:eq={() =>
-              (equation =
-                "SV=\\frac{\\text{cardiac index}\\times\\text{heart rate}}{1000}")}
+              (equation = "SV=\\frac{\\text{CI}\\times\\text{HR}}{1000}")}
             >Stroke volume index (SVI):</Calculated
           >
 
@@ -146,7 +145,7 @@
             max={105}
             on:eq={() =>
               (equation =
-                "MAP = \\frac{\\text{systolic BP} + 2\\times \\text{diastolic BP}}{3} (70-105 mmHg)")}
+                "MAP = \\frac{\\text{SBP} + 2\\times \\text{DBP}}{3} (70-105 mmHg)")}
             >Mean artery pressure (MAP):</Calculated
           >
 
@@ -165,7 +164,9 @@
             data={SVRI}
             min={1970}
             max={2390}
-            eq={"80 * (MAP - CVP) / CI | 1970 – 2390 dynes · sec/cm5/m2"}
+            on:eq={() =>
+              (equation =
+                "\\frac{80\\times (\\text{MAP} - \\text{CVP})}{CI}\\, 1970 – 239\\, dynes · sec/cm^5/m^2")}
           >
             Systemic vascular resistance index (SVRI):
           </Calculated>
