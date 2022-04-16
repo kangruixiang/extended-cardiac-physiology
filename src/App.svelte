@@ -119,7 +119,7 @@
             max={100}
             on:eq={() =>
               (equation =
-                "\\text{SV}=\\frac{\\text{CO}}{\\text{HR}}}\\times 1000")}
+                "\\text{SV}=\\frac{\\text{CO}}{\\text{HR}}\\times 1000")}
           >
             Stroke volume (SV):</Calculated
           >
@@ -130,7 +130,7 @@
             max={47}
             on:eq={() =>
               (equation =
-                "\\text{SVI}=\\frac{\\text{CI}}{\\text{HR}}}\\times 1000")}
+                "\\text{SVI}=\\frac{\\text{CI}}{\\text{HR}}\\times 1000")}
             >Stroke volume index (SVI):</Calculated
           >
 
