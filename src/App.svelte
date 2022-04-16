@@ -119,7 +119,7 @@
             max={100}
             on:eq={() =>
               (equation =
-                "\\text{SV}=\\frac{\\text{CO}\\times\\text{HR}}{1000}")}
+                "\\text{SV}=\\frac{\\text{CO}}{\\text{HR}}}\\times 1000")}
           >
             Stroke volume (SV):</Calculated
           >
@@ -130,7 +130,7 @@
             max={47}
             on:eq={() =>
               (equation =
-                "\\text{SV}=\\frac{\\text{CI}\\times\\text{HR}}{1000}")}
+                "\\text{SVI}=\\frac{\\text{CI}}{\\text{HR}}}\\times 1000")}
             >Stroke volume index (SVI):</Calculated
           >
 
@@ -161,7 +161,7 @@
             max={2390}
             on:eq={() =>
               (equation =
-                "\\text{SVRI} = \\frac{80\\times (\\text{MAP} - \\text{CVP})}{CI}\\,1970 – 2390\\,dynes · sec/cm^5/m^2")}
+                "\\text{SVRI} = \\frac{80\\times (\\text{MAP} - \\text{CVP})}{\\text{CI}}\\,1970 – 2390\\,dynes · sec/cm^5/m^2")}
           >
             Systemic vascular resistance index (SVRI):
           </Calculated>
