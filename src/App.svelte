@@ -16,7 +16,6 @@
     HR = 80,
     SBP = 120,
     DBP = 80,
-    EF = 55,
     PAWP = 10;
   let HgbT = "Hgb";
 
@@ -48,6 +47,9 @@
   $: RVSW = SV * (MPAP - CVP) * 0.0136;
   $: RVSWI = SVI * (MPAP - CVP) * 0.0136;
 
+  $: TPG = MPAP - PAWP;
+  $: DPG = PADP - PAWP;
+
   let equation = "\\text{Click on a Variable Below To See Formula}";
 
   $: katexString = katex.renderToString(equation, {
@@ -70,14 +72,14 @@
     class="container flex justify-center w-full h-screen align-middle md:h-auto"
   >
     <div
-      class="flex flex-col w-full px-2 my-2 rounded-lg lg:px-24 lg:my-12 lg:pt-24 lg:pb-12 lg:border-2 lg:border-solid lg:border-zinc-900"
+      class="flex flex-col w-full px-2 my-2 rounded-lg lg:mx-12 lg:px-24 lg:my-12 lg:pt-24 lg:pb-12 lg:border-2 lg:border-solid lg:border-zinc-900"
     >
       <div
-        class="py-4 overflow-y-auto border-b h-2/5 md:h-auto md:mb-12 top border-zinc-400"
+        class="py-4 overflow-y-auto border-b h-3/5 md:h-auto md:mb-12 top border-zinc-400"
       >
         <h2>Extended Cardiac Physiology</h2>
         <div
-          class="flex items-center justify-center w-full h-20 px-4 py-2 my-2 font-serif text-sm rounded-md bg-zinc-100"
+          class="flex items-center justify-center w-full h-20 px-4 py-2 my-2 overflow-x-auto font-serif text-sm rounded-md bg-zinc-100"
         >
           <div>{@html katexString}</div>
         </div>
@@ -88,7 +90,7 @@
             max={8}
             on:eq={() =>
               (equation =
-                "\\text{CO} = \\frac{O_2\\text{ delivery}}{(S_aO_2 - S_vO_2)\\times 0.01\\times \\text{Hgb}\\times 13.4}\\,(4 - 8\\,L/min)")}
+                "\\text{CO} = \\frac{O_2\\text{ delivery}}{(S_aO_2 - S_vO_2)\\times 0.01\\times \\text{Hgb}\\times 13.4}=\\frac{\\text{HR}\\times\\text{SV}}{1000}(4 - 8\\,L/min)")}
           >
             Cardiac output (CO):
           </Calculated>
@@ -109,7 +111,7 @@
             data={CPO}
             on:eq={() =>
               (equation =
-                "\\text{CPO}=\\frac{\\text{MAP}\\times \\text{CO}}{451}")}
+                "\\text{CPO}=\\frac{\\text{MAP}\\times \\text{CO}}{451}\\,(W)")}
             >Cardiac power output (CPO):</Calculated
           >
 
@@ -119,7 +121,7 @@
             max={100}
             on:eq={() =>
               (equation =
-                "\\text{SV}=\\frac{\\text{CO}}{\\text{HR}}\\times 1000")}
+                "\\text{SV}=\\frac{\\text{CO}}{\\text{HR}}\\times 1000\\,(60 - 80\\,ml/beat)")}
           >
             Stroke volume (SV):</Calculated
           >
@@ -130,7 +132,7 @@
             max={47}
             on:eq={() =>
               (equation =
-                "\\text{SVI}=\\frac{\\text{CI}}{\\text{HR}}\\times 1000")}
+                "\\text{SVI}=\\frac{\\text{CI}}{\\text{HR}}\\times 1000\\,(33 - 47\\,ml/m^2/beat)")}
             >Stroke volume index (SVI):</Calculated
           >
 
@@ -146,11 +148,11 @@
 
           <Calculated
             data={SVR}
-            min={900}
-            max={1440}
+            min={700}
+            max={1600}
             on:eq={() =>
               (equation =
-                "\\text{SVR} = \\frac{80\\times(\\text{MAP} - \\text{CVP})}{3}\\,(70-105\\,mmHg)")}
+                "\\text{SVR} = \\frac{80\\times(\\text{MAP} - \\text{CVP})}{\\text{CO}}\\,(700-1600\\,dynes · sec/cm^5)")}
           >
             Systemic vascular resistance (SVR):
           </Calculated>
@@ -172,9 +174,9 @@
             max={20}
             on:eq={() =>
               (equation =
-                "\\text{MPAP} = \\frac{\\text{PASP} + 2\\times \\text{PADP}}{3}\\,(10-20\\,mmHg)")}
+                "\\text{mPAP} = \\frac{\\text{PASP} + 2\\times \\text{PADP}}{3}\\,(10-20\\,mmHg)")}
           >
-            Mean pulmonary artery pressure (MPAP):
+            Mean pulmonary artery pressure (mPAP):
           </Calculated>
 
           <Calculated
@@ -182,7 +184,7 @@
             max={250}
             on:eq={() =>
               (equation =
-                "\\text{PVR} = \\frac{80\\times(\\text{MPAP} - \\text{PAWP})}{3}\\,(<250\\,mmHg)")}
+                "\\text{PVR} = \\frac{80\\times(\\text{mPAP} - \\text{PAWP})}{\\text{CO}}\\,(<250\\,dynes · sec/cm^5)")}
           >
             Pulmonary vascular resistance (PVR):
           </Calculated>
@@ -193,7 +195,7 @@
             max={285}
             on:eq={() =>
               (equation =
-                "\\text{PVRI} = \\frac{80\\times(\\text{MPAP} - \\text{PAWP})}{3}\\,(255-285\\,mmHg)")}
+                "\\text{PVRI} = \\frac{80\\times(\\text{mPAP} - \\text{PAWP})}{\\text{CI}}\\,(255-285\\,dynes · sec/cm^5/m^2")}
           >
             Pulmonary vascular resistance index (PVRI):
           </Calculated>
@@ -202,9 +204,27 @@
             data={PAPI}
             on:eq={() =>
               (equation =
-                "\\text{PAPI} = \\frac{\\text{PASP} - \\text{PADP}}{\\text{CVP}}")}
+                "\\text{PAPi} = \\frac{\\text{PASP} - \\text{PADP}}{\\text{CVP}}")}
           >
-            Pulmonary artery pulsatile index (PAPI):
+            Pulmonary artery pulsatile index (PAPi):
+          </Calculated>
+
+          <Calculated
+            data={TPG}
+            on:eq={() =>
+              (equation = "\\text{TPG} = \\text{mPAP} - \\text{PAWP}\\,(mmHg)")}
+          >
+            Transpulmonary pressure gradient (TPG):
+          </Calculated>
+
+          <Calculated
+            data={DPG}
+            min={5}
+            max={10}
+            on:eq={() =>
+              (equation = "\\text{DPG} = \\text{PADP} - \\text{PAWP}\\,(mmHg)")}
+          >
+            Diastolic pressure gradient (DPG):
           </Calculated>
 
           <Calculated
@@ -213,7 +233,7 @@
             max={104}
             on:eq={() =>
               (equation =
-                "\\text{LVSW} = \\text{SV}\\times(\\text{MAP} - \\text{PAWP})\\times 0.0136")}
+                "\\text{LVSW} = \\text{SV}\\times(\\text{MAP} - \\text{PAWP})\\times 0.0136\\,(58 - 104\\,gm·m/beat)")}
           >
             Left ventricular stroke work (LVSW):
           </Calculated>
@@ -224,7 +244,7 @@
             max={62}
             on:eq={() =>
               (equation =
-                "\\text{LVSWI} = \\text{SVI}\\times(\\text{PAWP} - \\text{CVP})\\times 0.0136")}
+                "\\text{LVSWI} = \\text{SVI}\\times(\\text{PAWP} - \\text{CVP})\\times 0.0136\\,(50 - 62\\,gm·m/m^2/beat)")}
           >
             Left ventricular stroke work index (LVSWI):
           </Calculated>
@@ -235,7 +255,7 @@
             max={16}
             on:eq={() =>
               (equation =
-                "\\text{RVSW} = \\text{SV}\\times(\\text{MPAP} - \\text{CVP})\\times 0.0136")}
+                "\\text{RVSW} = \\text{SV}\\times(\\text{mPAP} - \\text{CVP})\\times 0.0136\\,(8 - 16\\,gm·m/beat)")}
           >
             Right ventricular stroke work (RVSW):
           </Calculated>
@@ -246,14 +266,14 @@
             max={10}
             on:eq={() =>
               (equation =
-                "\\text{RVSWI} = \\text{SVI}\\times(\\text{MPAP} - \\text{CVP})\\times 0.0136")}
+                "\\text{RVSWI} = \\text{SVI}\\times(\\text{mPAP} - \\text{CVP})\\times 0.0136\\,(5 - 10\\,gm·m/m^2/beat)")}
           >
             Right ventricular stroke work index (RVSWI):
           </Calculated>
         </div>
       </div>
       <div
-        class="grid grid-cols-1 mt-4 overflow-y-auto h-3/5 md:h-auto md:mt-4 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-2 bottom"
+        class="grid grid-cols-1 mt-4 overflow-y-auto h-2/5 md:h-auto md:mt-4 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-2 bottom"
       >
         <Dynamic min={40} max={300} bind:result={LB}>
           Weight (lbs)
@@ -284,21 +304,30 @@
 
         <Dynamic min={1} max={100} bind:result={Age}>Age (years)</Dynamic>
 
-        <Dynamic min={20} max={200} bind:result={HR}>HR (beats per min)</Dynamic
+        <Dynamic
+          min={20}
+          max={200}
+          bind:result={HR}
+          on:slide={() => {
+            console.log(HR, SV, CO2);
+          }}>HR (beats per min)</Dynamic
         >
 
         <Dynamic min={1} max={15} bind:result={CO}>
-          CO calculated using O2 delivery (L/min)
+          Cardiac Output (L/min)
         </Dynamic>
 
-        <Dynamic min={1} max={15} bind:result={CO2}>
-          CO calculated using stroke volume
-        </Dynamic>
-
-        <Dynamic min={10} max={150} bind:result={SV}>Stroke volume</Dynamic>
+        <Dynamic
+          min={10}
+          max={150}
+          bind:result={SV}
+          on:slide={() => {
+            CO = CO2;
+          }}>Stroke volume (mL)</Dynamic
+        >
 
         <Dynamic min={0} max={100} bind:result={SVI}>
-          Stroke volume index
+          Stroke volume index (mL/m^2)
         </Dynamic>
 
         <Dynamic min={60} max={240} bind:result={SBP}>
