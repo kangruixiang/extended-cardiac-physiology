@@ -79,7 +79,7 @@
       >
         <h2>Extended Cardiac Physiology</h2>
         <div
-          class="flex items-center justify-center w-full h-20 px-4 py-2 my-2 overflow-x-auto font-serif text-sm rounded-md bg-zinc-100"
+          class="flex items-center justify-center w-full h-24 py-2 my-2 overflow-x-auto font-serif text-sm rounded-md bg-zinc-100"
         >
           <div>{@html katexString}</div>
         </div>
