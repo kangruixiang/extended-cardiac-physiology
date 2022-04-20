@@ -20,6 +20,6 @@
     class="font-semibold text-right"
     class:warning={data < min || data > max}
   >
-    {Math.round(data * 10) / 10}
+    {data.toFixed(1)}
   </div>
 </div>

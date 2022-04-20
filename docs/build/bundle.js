@@ -18805,7 +18805,7 @@ var app = (function () {
     	let t0;
     	let t1;
     	let div1;
-    	let t2_value = Math.round(/*data*/ ctx[0] * 10) / 10 + "";
+    	let t2_value = /*data*/ ctx[0].toFixed(1) + "";
     	let t2;
     	let current;
     	let mounted;
@@ -18868,7 +18868,7 @@ var app = (function () {
     				}
     			}
 
-    			if ((!current || dirty & /*data*/ 1) && t2_value !== (t2_value = Math.round(/*data*/ ctx[0] * 10) / 10 + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*data*/ 1) && t2_value !== (t2_value = /*data*/ ctx[0].toFixed(1) + "")) set_data_dev(t2, t2_value);
 
     			if (dirty & /*data, min, max*/ 7) {
     				toggle_class(div1, "warning", /*data*/ ctx[0] < /*min*/ ctx[1] || /*data*/ ctx[0] > /*max*/ ctx[2]);
