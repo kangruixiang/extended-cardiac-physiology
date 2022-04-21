@@ -353,10 +353,11 @@
         </Dynamic>
       </div>
       <div class="text-sm font-semibold text-center md:mt-12">
-        Email me at <a
+        Contact me on <a
           class="font-sans hover:underline"
-          href="mailto:kangruixiang@gmail.com">kangruixiang@gmail.com</a
-        > for questions or suggestions
+          href="https://github.com/kangruixiang/extended-cardiac-physiology"
+          >Github</a
+        > for questions or suggestions.
       </div>
     </div>
   </div>
