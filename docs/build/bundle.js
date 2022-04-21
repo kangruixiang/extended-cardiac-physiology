@@ -18999,7 +18999,7 @@ var app = (function () {
     const { console: console_1 } = globals;
     const file = "src\\App.svelte";
 
-    // (87:10) <Calculated             data={CO}             min={4}             max={8}             on:eq={() =>               (equation =                 "\\text{CO} = \\frac{O_2\\text{ delivery}}{(S_aO_2 - S_vO_2)\\times 0.01\\times \\text{Hgb}\\times 13.4}=\\frac{\\text{HR}\\times\\text{SV}}{1000}(4 - 8\\,L/min)")}           >
+    // (87:10) <Calculated             data={CO}             min={4}             max={8}             on:eq={() =>               (equation =                 "\\text{CO} = \\frac{O_2\\text{ delivery}}{(S_aO_2 - S_vO_2)\\times 0.01\\times \\text{Hgb}\\times 13.4}=\\frac{\\text{HR}\\times\\text{SV}}{1000}(4 - 8\\;L/min)")}           >
     function create_default_slot_33(ctx) {
     	let t;
 
@@ -19019,14 +19019,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_33.name,
     		type: "slot",
-    		source: "(87:10) <Calculated             data={CO}             min={4}             max={8}             on:eq={() =>               (equation =                 \\\"\\\\text{CO} = \\\\frac{O_2\\\\text{ delivery}}{(S_aO_2 - S_vO_2)\\\\times 0.01\\\\times \\\\text{Hgb}\\\\times 13.4}=\\\\frac{\\\\text{HR}\\\\times\\\\text{SV}}{1000}(4 - 8\\\\,L/min)\\\")}           >",
+    		source: "(87:10) <Calculated             data={CO}             min={4}             max={8}             on:eq={() =>               (equation =                 \\\"\\\\text{CO} = \\\\frac{O_2\\\\text{ delivery}}{(S_aO_2 - S_vO_2)\\\\times 0.01\\\\times \\\\text{Hgb}\\\\times 13.4}=\\\\frac{\\\\text{HR}\\\\times\\\\text{SV}}{1000}(4 - 8\\\\;L/min)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (98:10) <Calculated             data={CI}             min={2}             max={4}             on:eq={() => {               equation =                 "\\text{CI} = \\frac{\\text{CO}}{\\text{body surface area}}\\,(2 - 4\\,L/min/m^2)";             }}           >
+    // (98:10) <Calculated             data={CI}             min={2}             max={4}             on:eq={() => {               equation =                 "\\text{CI} = \\frac{\\text{CO}}{\\text{body surface area}}\\;(2 - 4\\;L/min/m^2)";             }}           >
     function create_default_slot_32(ctx) {
     	let t;
 
@@ -19046,14 +19046,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_32.name,
     		type: "slot",
-    		source: "(98:10) <Calculated             data={CI}             min={2}             max={4}             on:eq={() => {               equation =                 \\\"\\\\text{CI} = \\\\frac{\\\\text{CO}}{\\\\text{body surface area}}\\\\,(2 - 4\\\\,L/min/m^2)\\\";             }}           >",
+    		source: "(98:10) <Calculated             data={CI}             min={2}             max={4}             on:eq={() => {               equation =                 \\\"\\\\text{CI} = \\\\frac{\\\\text{CO}}{\\\\text{body surface area}}\\\\;(2 - 4\\\\;L/min/m^2)\\\";             }}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (110:10) <Calculated             data={CPO}             on:eq={() =>               (equation =                 "\\text{CPO}=\\frac{\\text{MAP}\\times \\text{CO}}{451}\\,(W)")}             >
+    // (110:10) <Calculated             data={CPO}             on:eq={() =>               (equation =                 "\\text{CPO}=\\frac{\\text{MAP}\\times \\text{CO}}{451}\\;(W)")}             >
     function create_default_slot_31(ctx) {
     	let t;
 
@@ -19073,14 +19073,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_31.name,
     		type: "slot",
-    		source: "(110:10) <Calculated             data={CPO}             on:eq={() =>               (equation =                 \\\"\\\\text{CPO}=\\\\frac{\\\\text{MAP}\\\\times \\\\text{CO}}{451}\\\\,(W)\\\")}             >",
+    		source: "(110:10) <Calculated             data={CPO}             on:eq={() =>               (equation =                 \\\"\\\\text{CPO}=\\\\frac{\\\\text{MAP}\\\\times \\\\text{CO}}{451}\\\\;(W)\\\")}             >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (118:10) <Calculated             data={SV}             min={60}             max={100}             on:eq={() =>               (equation =                 "\\text{SV}=\\frac{\\text{CO}}{\\text{HR}}\\times 1000\\,(60 - 80\\,ml/beat)")}           >
+    // (118:10) <Calculated             data={SV}             min={60}             max={100}             on:eq={() =>               (equation =                 "\\text{SV}=\\frac{\\text{CO}}{\\text{HR}}\\times 1000\\;(60 - 80\\;ml/beat)")}           >
     function create_default_slot_30(ctx) {
     	let t;
 
@@ -19100,14 +19100,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_30.name,
     		type: "slot",
-    		source: "(118:10) <Calculated             data={SV}             min={60}             max={100}             on:eq={() =>               (equation =                 \\\"\\\\text{SV}=\\\\frac{\\\\text{CO}}{\\\\text{HR}}\\\\times 1000\\\\,(60 - 80\\\\,ml/beat)\\\")}           >",
+    		source: "(118:10) <Calculated             data={SV}             min={60}             max={100}             on:eq={() =>               (equation =                 \\\"\\\\text{SV}=\\\\frac{\\\\text{CO}}{\\\\text{HR}}\\\\times 1000\\\\;(60 - 80\\\\;ml/beat)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (129:10) <Calculated             data={SVI}             min={33}             max={47}             on:eq={() =>               (equation =                 "\\text{SVI}=\\frac{\\text{CI}}{\\text{HR}}\\times 1000\\,(33 - 47\\,ml/m^2/beat)")}             >
+    // (129:10) <Calculated             data={SVI}             min={33}             max={47}             on:eq={() =>               (equation =                 "\\text{SVI}=\\frac{\\text{CI}}{\\text{HR}}\\times 1000\\;(33 - 47\\;ml/m^2/beat)")}             >
     function create_default_slot_29(ctx) {
     	let t;
 
@@ -19127,14 +19127,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_29.name,
     		type: "slot",
-    		source: "(129:10) <Calculated             data={SVI}             min={33}             max={47}             on:eq={() =>               (equation =                 \\\"\\\\text{SVI}=\\\\frac{\\\\text{CI}}{\\\\text{HR}}\\\\times 1000\\\\,(33 - 47\\\\,ml/m^2/beat)\\\")}             >",
+    		source: "(129:10) <Calculated             data={SVI}             min={33}             max={47}             on:eq={() =>               (equation =                 \\\"\\\\text{SVI}=\\\\frac{\\\\text{CI}}{\\\\text{HR}}\\\\times 1000\\\\;(33 - 47\\\\;ml/m^2/beat)\\\")}             >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (139:10) <Calculated             data={MAP}             min={70}             max={105}             on:eq={() =>               (equation =                 "\\text{MAP} = \\frac{\\text{SBP} + 2\\times \\text{DBP}}{3}\\,(70-105\\,mmHg)")}             >
+    // (139:10) <Calculated             data={MAP}             min={70}             max={105}             on:eq={() =>               (equation =                 "\\text{MAP} = \\frac{\\text{SBP} + 2\\times \\text{DBP}}{3}\\;(70-105\\;mmHg)")}             >
     function create_default_slot_28(ctx) {
     	let t;
 
@@ -19154,14 +19154,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_28.name,
     		type: "slot",
-    		source: "(139:10) <Calculated             data={MAP}             min={70}             max={105}             on:eq={() =>               (equation =                 \\\"\\\\text{MAP} = \\\\frac{\\\\text{SBP} + 2\\\\times \\\\text{DBP}}{3}\\\\,(70-105\\\\,mmHg)\\\")}             >",
+    		source: "(139:10) <Calculated             data={MAP}             min={70}             max={105}             on:eq={() =>               (equation =                 \\\"\\\\text{MAP} = \\\\frac{\\\\text{SBP} + 2\\\\times \\\\text{DBP}}{3}\\\\;(70-105\\\\;mmHg)\\\")}             >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (149:10) <Calculated             data={SVR}             min={700}             max={1600}             on:eq={() =>               (equation =                 "\\text{SVR} = \\frac{80\\times(\\text{MAP} - \\text{CVP})}{\\text{CO}}\\,(700-1600\\,dynes · sec/cm^5)")}           >
+    // (149:10) <Calculated             data={SVR}             min={8}             max={20}             on:eq={() =>               (equation =                 "\\text{SVR} = \\frac{\\text{MAP} - \\text{CVP}}{\\text{CO}}\\;(8-20\\;mmHg·min/L)")}           >
     function create_default_slot_27(ctx) {
     	let t;
 
@@ -19181,14 +19181,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_27.name,
     		type: "slot",
-    		source: "(149:10) <Calculated             data={SVR}             min={700}             max={1600}             on:eq={() =>               (equation =                 \\\"\\\\text{SVR} = \\\\frac{80\\\\times(\\\\text{MAP} - \\\\text{CVP})}{\\\\text{CO}}\\\\,(700-1600\\\\,dynes · sec/cm^5)\\\")}           >",
+    		source: "(149:10) <Calculated             data={SVR}             min={8}             max={20}             on:eq={() =>               (equation =                 \\\"\\\\text{SVR} = \\\\frac{\\\\text{MAP} - \\\\text{CVP}}{\\\\text{CO}}\\\\;(8-20\\\\;mmHg·min/L)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (160:10) <Calculated             data={SVRI}             min={1970}             max={2390}             on:eq={() =>               (equation =                 "\\text{SVRI} = \\frac{80\\times (\\text{MAP} - \\text{CVP})}{\\text{CI}}\\,1970 – 2390\\,dynes · sec/cm^5/m^2")}           >
+    // (160:10) <Calculated             data={SVRI}             min={24}             max={30}             on:eq={() =>               (equation =                 "\\text{SVRI} = \\frac{\\text{MAP} - \\text{CVP}}{\\text{CI}}\\;(24 – 30\\;mmHg·min/L/m^2)")}           >
     function create_default_slot_26(ctx) {
     	let t;
 
@@ -19208,14 +19208,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_26.name,
     		type: "slot",
-    		source: "(160:10) <Calculated             data={SVRI}             min={1970}             max={2390}             on:eq={() =>               (equation =                 \\\"\\\\text{SVRI} = \\\\frac{80\\\\times (\\\\text{MAP} - \\\\text{CVP})}{\\\\text{CI}}\\\\,1970 – 2390\\\\,dynes · sec/cm^5/m^2\\\")}           >",
+    		source: "(160:10) <Calculated             data={SVRI}             min={24}             max={30}             on:eq={() =>               (equation =                 \\\"\\\\text{SVRI} = \\\\frac{\\\\text{MAP} - \\\\text{CVP}}{\\\\text{CI}}\\\\;(24 – 30\\\\;mmHg·min/L/m^2)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (171:10) <Calculated             data={MPAP}             min={10}             max={20}             on:eq={() =>               (equation =                 "\\text{mPAP} = \\frac{\\text{PASP} + 2\\times \\text{PADP}}{3}\\,(10-20\\,mmHg)")}           >
+    // (171:10) <Calculated             data={MPAP}             min={10}             max={20}             on:eq={() =>               (equation =                 "\\text{mPAP} = \\frac{\\text{PASP} + 2\\times \\text{PADP}}{3}\\;(10-20\\;mmHg)")}           >
     function create_default_slot_25(ctx) {
     	let t;
 
@@ -19235,14 +19235,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_25.name,
     		type: "slot",
-    		source: "(171:10) <Calculated             data={MPAP}             min={10}             max={20}             on:eq={() =>               (equation =                 \\\"\\\\text{mPAP} = \\\\frac{\\\\text{PASP} + 2\\\\times \\\\text{PADP}}{3}\\\\,(10-20\\\\,mmHg)\\\")}           >",
+    		source: "(171:10) <Calculated             data={MPAP}             min={10}             max={20}             on:eq={() =>               (equation =                 \\\"\\\\text{mPAP} = \\\\frac{\\\\text{PASP} + 2\\\\times \\\\text{PADP}}{3}\\\\;(10-20\\\\;mmHg)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (182:10) <Calculated             data={PVR}             max={250}             on:eq={() =>               (equation =                 "\\text{PVR} = \\frac{80\\times(\\text{mPAP} - \\text{PAWP})}{\\text{CO}}\\,(<250\\,dynes · sec/cm^5)")}           >
+    // (182:10) <Calculated             data={PVR}             max={3}             on:eq={() =>               (equation =                 "\\text{PVR} = \\frac{\\text{TPG}}{\\text{CO}}\\;(<3\\;mmHg·min/L)")}           >
     function create_default_slot_24(ctx) {
     	let t;
 
@@ -19262,14 +19262,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_24.name,
     		type: "slot",
-    		source: "(182:10) <Calculated             data={PVR}             max={250}             on:eq={() =>               (equation =                 \\\"\\\\text{PVR} = \\\\frac{80\\\\times(\\\\text{mPAP} - \\\\text{PAWP})}{\\\\text{CO}}\\\\,(<250\\\\,dynes · sec/cm^5)\\\")}           >",
+    		source: "(182:10) <Calculated             data={PVR}             max={3}             on:eq={() =>               (equation =                 \\\"\\\\text{PVR} = \\\\frac{\\\\text{TPG}}{\\\\text{CO}}\\\\;(<3\\\\;mmHg·min/L)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (192:10) <Calculated             data={PVRI}             min={255}             max={285}             on:eq={() =>               (equation =                 "\\text{PVRI} = \\frac{80\\times(\\text{mPAP} - \\text{PAWP})}{\\text{CI}}\\,(255-285\\,dynes · sec/cm^5/m^2")}           >
+    // (192:10) <Calculated             data={PVRI}             min={3}             max={3.6}             on:eq={() =>               (equation =                 "\\text{PVRI} = \\frac{\\text{TPG}}{\\text{CI}}\\;(3-3.6\\;mmHg·min/L/m^2)")}           >
     function create_default_slot_23(ctx) {
     	let t;
 
@@ -19289,7 +19289,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_23.name,
     		type: "slot",
-    		source: "(192:10) <Calculated             data={PVRI}             min={255}             max={285}             on:eq={() =>               (equation =                 \\\"\\\\text{PVRI} = \\\\frac{80\\\\times(\\\\text{mPAP} - \\\\text{PAWP})}{\\\\text{CI}}\\\\,(255-285\\\\,dynes · sec/cm^5/m^2\\\")}           >",
+    		source: "(192:10) <Calculated             data={PVRI}             min={3}             max={3.6}             on:eq={() =>               (equation =                 \\\"\\\\text{PVRI} = \\\\frac{\\\\text{TPG}}{\\\\text{CI}}\\\\;(3-3.6\\\\;mmHg·min/L/m^2)\\\")}           >",
     		ctx
     	});
 
@@ -19323,7 +19323,7 @@ var app = (function () {
     	return block;
     }
 
-    // (212:10) <Calculated             data={TPG}             on:eq={() =>               (equation = "\\text{TPG} = \\text{mPAP} - \\text{PAWP}\\,(mmHg)")}           >
+    // (212:10) <Calculated             data={TPG}             on:eq={() =>               (equation = "\\text{TPG} = \\text{mPAP} - \\text{PAWP}\\;(mmHg)")}           >
     function create_default_slot_21(ctx) {
     	let t;
 
@@ -19343,14 +19343,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_21.name,
     		type: "slot",
-    		source: "(212:10) <Calculated             data={TPG}             on:eq={() =>               (equation = \\\"\\\\text{TPG} = \\\\text{mPAP} - \\\\text{PAWP}\\\\,(mmHg)\\\")}           >",
+    		source: "(212:10) <Calculated             data={TPG}             on:eq={() =>               (equation = \\\"\\\\text{TPG} = \\\\text{mPAP} - \\\\text{PAWP}\\\\;(mmHg)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (220:10) <Calculated             data={DPG}             min={5}             max={10}             on:eq={() =>               (equation = "\\text{DPG} = \\text{PADP} - \\text{PAWP}\\,(mmHg)")}           >
+    // (220:10) <Calculated             data={DPG}             min={5}             max={10}             on:eq={() =>               (equation = "\\text{DPG} = \\text{PADP} - \\text{PAWP}\\;(mmHg)")}           >
     function create_default_slot_20(ctx) {
     	let t;
 
@@ -19370,14 +19370,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_20.name,
     		type: "slot",
-    		source: "(220:10) <Calculated             data={DPG}             min={5}             max={10}             on:eq={() =>               (equation = \\\"\\\\text{DPG} = \\\\text{PADP} - \\\\text{PAWP}\\\\,(mmHg)\\\")}           >",
+    		source: "(220:10) <Calculated             data={DPG}             min={5}             max={10}             on:eq={() =>               (equation = \\\"\\\\text{DPG} = \\\\text{PADP} - \\\\text{PAWP}\\\\;(mmHg)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (230:10) <Calculated             data={LVSW}             min={58}             max={104}             on:eq={() =>               (equation =                 "\\text{LVSW} = \\text{SV}\\times(\\text{MAP} - \\text{PAWP})\\times 0.0136\\,(58 - 104\\,gm·m/beat)")}           >
+    // (230:10) <Calculated             data={LVSW}             min={58}             max={104}             on:eq={() =>               (equation =                 "\\text{LVSW} = \\text{SV}\\times(\\text{MAP} - \\text{PAWP})\\times 0.0136\\;(58 - 104\\;gm·m/beat)")}           >
     function create_default_slot_19(ctx) {
     	let t;
 
@@ -19397,14 +19397,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_19.name,
     		type: "slot",
-    		source: "(230:10) <Calculated             data={LVSW}             min={58}             max={104}             on:eq={() =>               (equation =                 \\\"\\\\text{LVSW} = \\\\text{SV}\\\\times(\\\\text{MAP} - \\\\text{PAWP})\\\\times 0.0136\\\\,(58 - 104\\\\,gm·m/beat)\\\")}           >",
+    		source: "(230:10) <Calculated             data={LVSW}             min={58}             max={104}             on:eq={() =>               (equation =                 \\\"\\\\text{LVSW} = \\\\text{SV}\\\\times(\\\\text{MAP} - \\\\text{PAWP})\\\\times 0.0136\\\\;(58 - 104\\\\;gm·m/beat)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (241:10) <Calculated             data={LVSWI}             min={50}             max={62}             on:eq={() =>               (equation =                 "\\text{LVSWI} = \\text{SVI}\\times(\\text{PAWP} - \\text{CVP})\\times 0.0136\\,(50 - 62\\,gm·m/m^2/beat)")}           >
+    // (241:10) <Calculated             data={LVSWI}             min={50}             max={62}             on:eq={() =>               (equation =                 "\\text{LVSWI} = \\text{SVI}\\times(\\text{PAWP} - \\text{CVP})\\times 0.0136\\;(50 - 62\\;gm·m/m^2/beat)")}           >
     function create_default_slot_18(ctx) {
     	let t;
 
@@ -19424,14 +19424,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_18.name,
     		type: "slot",
-    		source: "(241:10) <Calculated             data={LVSWI}             min={50}             max={62}             on:eq={() =>               (equation =                 \\\"\\\\text{LVSWI} = \\\\text{SVI}\\\\times(\\\\text{PAWP} - \\\\text{CVP})\\\\times 0.0136\\\\,(50 - 62\\\\,gm·m/m^2/beat)\\\")}           >",
+    		source: "(241:10) <Calculated             data={LVSWI}             min={50}             max={62}             on:eq={() =>               (equation =                 \\\"\\\\text{LVSWI} = \\\\text{SVI}\\\\times(\\\\text{PAWP} - \\\\text{CVP})\\\\times 0.0136\\\\;(50 - 62\\\\;gm·m/m^2/beat)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (252:10) <Calculated             data={RVSW}             min={8}             max={16}             on:eq={() =>               (equation =                 "\\text{RVSW} = \\text{SV}\\times(\\text{mPAP} - \\text{CVP})\\times 0.0136\\,(8 - 16\\,gm·m/beat)")}           >
+    // (252:10) <Calculated             data={RVSW}             min={8}             max={16}             on:eq={() =>               (equation =                 "\\text{RVSW} = \\text{SV}\\times(\\text{mPAP} - \\text{CVP})\\times 0.0136\\;(8 - 16\\;gm·m/beat)")}           >
     function create_default_slot_17(ctx) {
     	let t;
 
@@ -19451,14 +19451,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_17.name,
     		type: "slot",
-    		source: "(252:10) <Calculated             data={RVSW}             min={8}             max={16}             on:eq={() =>               (equation =                 \\\"\\\\text{RVSW} = \\\\text{SV}\\\\times(\\\\text{mPAP} - \\\\text{CVP})\\\\times 0.0136\\\\,(8 - 16\\\\,gm·m/beat)\\\")}           >",
+    		source: "(252:10) <Calculated             data={RVSW}             min={8}             max={16}             on:eq={() =>               (equation =                 \\\"\\\\text{RVSW} = \\\\text{SV}\\\\times(\\\\text{mPAP} - \\\\text{CVP})\\\\times 0.0136\\\\;(8 - 16\\\\;gm·m/beat)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (263:10) <Calculated             data={RVSWI}             min={5}             max={10}             on:eq={() =>               (equation =                 "\\text{RVSWI} = \\text{SVI}\\times(\\text{mPAP} - \\text{CVP})\\times 0.0136\\,(5 - 10\\,gm·m/m^2/beat)")}           >
+    // (263:10) <Calculated             data={RVSWI}             min={5}             max={10}             on:eq={() =>               (equation =                 "\\text{RVSWI} = \\text{SVI}\\times(\\text{mPAP} - \\text{CVP})\\times 0.0136\\;(5 - 10\\;gm·m/m^2/beat)")}           >
     function create_default_slot_16(ctx) {
     	let t;
 
@@ -19478,7 +19478,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_16.name,
     		type: "slot",
-    		source: "(263:10) <Calculated             data={RVSWI}             min={5}             max={10}             on:eq={() =>               (equation =                 \\\"\\\\text{RVSWI} = \\\\text{SVI}\\\\times(\\\\text{mPAP} - \\\\text{CVP})\\\\times 0.0136\\\\,(5 - 10\\\\,gm·m/m^2/beat)\\\")}           >",
+    		source: "(263:10) <Calculated             data={RVSWI}             min={5}             max={10}             on:eq={() =>               (equation =                 \\\"\\\\text{RVSWI} = \\\\text{SVI}\\\\times(\\\\text{mPAP} - \\\\text{CVP})\\\\times 0.0136\\\\;(5 - 10\\\\;gm·m/m^2/beat)\\\")}           >",
     		ctx
     	});
 
@@ -20144,8 +20144,8 @@ var app = (function () {
     	calculated6 = new Calculated({
     			props: {
     				data: /*SVR*/ ctx[35],
-    				min: 700,
-    				max: 1600,
+    				min: 8,
+    				max: 20,
     				$$slots: { default: [create_default_slot_27] },
     				$$scope: { ctx }
     			},
@@ -20157,8 +20157,8 @@ var app = (function () {
     	calculated7 = new Calculated({
     			props: {
     				data: /*SVRI*/ ctx[34],
-    				min: 1970,
-    				max: 2390,
+    				min: 24,
+    				max: 30,
     				$$slots: { default: [create_default_slot_26] },
     				$$scope: { ctx }
     			},
@@ -20183,7 +20183,7 @@ var app = (function () {
     	calculated9 = new Calculated({
     			props: {
     				data: /*PVR*/ ctx[33],
-    				max: 250,
+    				max: 3,
     				$$slots: { default: [create_default_slot_24] },
     				$$scope: { ctx }
     			},
@@ -20195,8 +20195,8 @@ var app = (function () {
     	calculated10 = new Calculated({
     			props: {
     				data: /*PVRI*/ ctx[32],
-    				min: 255,
-    				max: 285,
+    				min: 3,
+    				max: 3.6,
     				$$slots: { default: [create_default_slot_23] },
     				$$scope: { ctx }
     			},
@@ -20677,27 +20677,27 @@ var app = (function () {
     			attr_dev(link, "href", "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css");
     			attr_dev(link, "integrity", "sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X");
     			attr_dev(link, "crossorigin", "anonymous");
-    			add_location(link, file, 61, 2, 1748);
-    			add_location(h2, file, 79, 8, 2364);
-    			add_location(div0, file, 83, 10, 2565);
+    			add_location(link, file, 61, 2, 1720);
+    			add_location(h2, file, 79, 8, 2336);
+    			add_location(div0, file, 83, 10, 2537);
     			attr_dev(div1, "class", "flex items-center justify-center w-full h-24 py-2 my-2 overflow-x-auto font-serif text-sm rounded-md bg-zinc-100");
-    			add_location(div1, file, 80, 8, 2409);
+    			add_location(div1, file, 80, 8, 2381);
     			attr_dev(div2, "class", "grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 gap-x-10");
-    			add_location(div2, file, 85, 8, 2619);
+    			add_location(div2, file, 85, 8, 2591);
     			attr_dev(div3, "class", "py-4 overflow-y-auto border-b h-3/5 md:h-auto md:mb-12 top border-zinc-400");
-    			add_location(div3, file, 76, 6, 2252);
+    			add_location(div3, file, 76, 6, 2224);
     			attr_dev(div4, "class", "grid grid-cols-1 mt-4 overflow-y-auto h-2/5 md:h-auto md:mt-4 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-2 bottom");
-    			add_location(div4, file, 274, 6, 8500);
+    			add_location(div4, file, 274, 6, 8350);
     			attr_dev(a, "class", "font-sans hover:underline");
     			attr_dev(a, "href", "mailto:kangruixiang@gmail.com");
-    			add_location(a, file, 355, 20, 10772);
+    			add_location(a, file, 355, 20, 10622);
     			attr_dev(div5, "class", "text-sm font-semibold text-center md:mt-12");
-    			add_location(div5, file, 354, 6, 10695);
+    			add_location(div5, file, 354, 6, 10545);
     			attr_dev(div6, "class", "flex flex-col w-full px-2 my-2 rounded-lg lg:mx-12 lg:px-24 lg:my-12 lg:pt-24 lg:pb-12 lg:border-2 lg:border-solid lg:border-zinc-900");
-    			add_location(div6, file, 73, 4, 2087);
+    			add_location(div6, file, 73, 4, 2059);
     			attr_dev(div7, "class", "container flex justify-center w-full h-screen align-middle md:h-auto");
-    			add_location(div7, file, 70, 2, 1993);
-    			add_location(main, file, 69, 0, 1984);
+    			add_location(div7, file, 70, 2, 1965);
+    			add_location(main, file, 69, 0, 1956);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -21316,28 +21316,28 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<App> was created with unknown prop '${key}'`);
     	});
 
-    	const eq_handler = () => $$invalidate(16, equation = "\\text{CO} = \\frac{O_2\\text{ delivery}}{(S_aO_2 - S_vO_2)\\times 0.01\\times \\text{Hgb}\\times 13.4}=\\frac{\\text{HR}\\times\\text{SV}}{1000}(4 - 8\\,L/min)");
+    	const eq_handler = () => $$invalidate(16, equation = "\\text{CO} = \\frac{O_2\\text{ delivery}}{(S_aO_2 - S_vO_2)\\times 0.01\\times \\text{Hgb}\\times 13.4}=\\frac{\\text{HR}\\times\\text{SV}}{1000}(4 - 8\\;L/min)");
 
     	const eq_handler_1 = () => {
-    		$$invalidate(16, equation = "\\text{CI} = \\frac{\\text{CO}}{\\text{body surface area}}\\,(2 - 4\\,L/min/m^2)");
+    		$$invalidate(16, equation = "\\text{CI} = \\frac{\\text{CO}}{\\text{body surface area}}\\;(2 - 4\\;L/min/m^2)");
     	};
 
-    	const eq_handler_2 = () => $$invalidate(16, equation = "\\text{CPO}=\\frac{\\text{MAP}\\times \\text{CO}}{451}\\,(W)");
-    	const eq_handler_3 = () => $$invalidate(16, equation = "\\text{SV}=\\frac{\\text{CO}}{\\text{HR}}\\times 1000\\,(60 - 80\\,ml/beat)");
-    	const eq_handler_4 = () => $$invalidate(16, equation = "\\text{SVI}=\\frac{\\text{CI}}{\\text{HR}}\\times 1000\\,(33 - 47\\,ml/m^2/beat)");
-    	const eq_handler_5 = () => $$invalidate(16, equation = "\\text{MAP} = \\frac{\\text{SBP} + 2\\times \\text{DBP}}{3}\\,(70-105\\,mmHg)");
-    	const eq_handler_6 = () => $$invalidate(16, equation = "\\text{SVR} = \\frac{80\\times(\\text{MAP} - \\text{CVP})}{\\text{CO}}\\,(700-1600\\,dynes · sec/cm^5)");
-    	const eq_handler_7 = () => $$invalidate(16, equation = "\\text{SVRI} = \\frac{80\\times (\\text{MAP} - \\text{CVP})}{\\text{CI}}\\,1970 – 2390\\,dynes · sec/cm^5/m^2");
-    	const eq_handler_8 = () => $$invalidate(16, equation = "\\text{mPAP} = \\frac{\\text{PASP} + 2\\times \\text{PADP}}{3}\\,(10-20\\,mmHg)");
-    	const eq_handler_9 = () => $$invalidate(16, equation = "\\text{PVR} = \\frac{80\\times(\\text{mPAP} - \\text{PAWP})}{\\text{CO}}\\,(<250\\,dynes · sec/cm^5)");
-    	const eq_handler_10 = () => $$invalidate(16, equation = "\\text{PVRI} = \\frac{80\\times(\\text{mPAP} - \\text{PAWP})}{\\text{CI}}\\,(255-285\\,dynes · sec/cm^5/m^2");
+    	const eq_handler_2 = () => $$invalidate(16, equation = "\\text{CPO}=\\frac{\\text{MAP}\\times \\text{CO}}{451}\\;(W)");
+    	const eq_handler_3 = () => $$invalidate(16, equation = "\\text{SV}=\\frac{\\text{CO}}{\\text{HR}}\\times 1000\\;(60 - 80\\;ml/beat)");
+    	const eq_handler_4 = () => $$invalidate(16, equation = "\\text{SVI}=\\frac{\\text{CI}}{\\text{HR}}\\times 1000\\;(33 - 47\\;ml/m^2/beat)");
+    	const eq_handler_5 = () => $$invalidate(16, equation = "\\text{MAP} = \\frac{\\text{SBP} + 2\\times \\text{DBP}}{3}\\;(70-105\\;mmHg)");
+    	const eq_handler_6 = () => $$invalidate(16, equation = "\\text{SVR} = \\frac{\\text{MAP} - \\text{CVP}}{\\text{CO}}\\;(8-20\\;mmHg·min/L)");
+    	const eq_handler_7 = () => $$invalidate(16, equation = "\\text{SVRI} = \\frac{\\text{MAP} - \\text{CVP}}{\\text{CI}}\\;(24 – 30\\;mmHg·min/L/m^2)");
+    	const eq_handler_8 = () => $$invalidate(16, equation = "\\text{mPAP} = \\frac{\\text{PASP} + 2\\times \\text{PADP}}{3}\\;(10-20\\;mmHg)");
+    	const eq_handler_9 = () => $$invalidate(16, equation = "\\text{PVR} = \\frac{\\text{TPG}}{\\text{CO}}\\;(<3\\;mmHg·min/L)");
+    	const eq_handler_10 = () => $$invalidate(16, equation = "\\text{PVRI} = \\frac{\\text{TPG}}{\\text{CI}}\\;(3-3.6\\;mmHg·min/L/m^2)");
     	const eq_handler_11 = () => $$invalidate(16, equation = "\\text{PAPi} = \\frac{\\text{PASP} - \\text{PADP}}{\\text{CVP}}");
-    	const eq_handler_12 = () => $$invalidate(16, equation = "\\text{TPG} = \\text{mPAP} - \\text{PAWP}\\,(mmHg)");
-    	const eq_handler_13 = () => $$invalidate(16, equation = "\\text{DPG} = \\text{PADP} - \\text{PAWP}\\,(mmHg)");
-    	const eq_handler_14 = () => $$invalidate(16, equation = "\\text{LVSW} = \\text{SV}\\times(\\text{MAP} - \\text{PAWP})\\times 0.0136\\,(58 - 104\\,gm·m/beat)");
-    	const eq_handler_15 = () => $$invalidate(16, equation = "\\text{LVSWI} = \\text{SVI}\\times(\\text{PAWP} - \\text{CVP})\\times 0.0136\\,(50 - 62\\,gm·m/m^2/beat)");
-    	const eq_handler_16 = () => $$invalidate(16, equation = "\\text{RVSW} = \\text{SV}\\times(\\text{mPAP} - \\text{CVP})\\times 0.0136\\,(8 - 16\\,gm·m/beat)");
-    	const eq_handler_17 = () => $$invalidate(16, equation = "\\text{RVSWI} = \\text{SVI}\\times(\\text{mPAP} - \\text{CVP})\\times 0.0136\\,(5 - 10\\,gm·m/m^2/beat)");
+    	const eq_handler_12 = () => $$invalidate(16, equation = "\\text{TPG} = \\text{mPAP} - \\text{PAWP}\\;(mmHg)");
+    	const eq_handler_13 = () => $$invalidate(16, equation = "\\text{DPG} = \\text{PADP} - \\text{PAWP}\\;(mmHg)");
+    	const eq_handler_14 = () => $$invalidate(16, equation = "\\text{LVSW} = \\text{SV}\\times(\\text{MAP} - \\text{PAWP})\\times 0.0136\\;(58 - 104\\;gm·m/beat)");
+    	const eq_handler_15 = () => $$invalidate(16, equation = "\\text{LVSWI} = \\text{SVI}\\times(\\text{PAWP} - \\text{CVP})\\times 0.0136\\;(50 - 62\\;gm·m/m^2/beat)");
+    	const eq_handler_16 = () => $$invalidate(16, equation = "\\text{RVSW} = \\text{SV}\\times(\\text{mPAP} - \\text{CVP})\\times 0.0136\\;(8 - 16\\;gm·m/beat)");
+    	const eq_handler_17 = () => $$invalidate(16, equation = "\\text{RVSWI} = \\text{SVI}\\times(\\text{mPAP} - \\text{CVP})\\times 0.0136\\;(5 - 10\\;gm·m/m^2/beat)");
 
     	function dynamic0_result_binding(value) {
     		LB = value;
@@ -21577,11 +21577,11 @@ var app = (function () {
     		}
 
     		if ($$self.$$.dirty[0] & /*MAP, CVP, CO*/ 515) {
-    			$$invalidate(35, SVR = 80 * (MAP - CVP) / CO);
+    			$$invalidate(35, SVR = (MAP - CVP) / CO);
     		}
 
     		if ($$self.$$.dirty[0] & /*MAP, CVP, CI*/ 524801) {
-    			$$invalidate(34, SVRI = 80 * (MAP - CVP) / CI);
+    			$$invalidate(34, SVRI = (MAP - CVP) / CI);
     		}
 
     		if ($$self.$$.dirty[0] & /*PASP, PADP*/ 3072) {
@@ -21589,11 +21589,11 @@ var app = (function () {
     		}
 
     		if ($$self.$$.dirty[0] & /*MPAP, PAWP, CO*/ 163842) {
-    			$$invalidate(33, PVR = 80 * (MPAP - PAWP) / CO);
+    			$$invalidate(33, PVR = (MPAP - PAWP) / CO);
     		}
 
     		if ($$self.$$.dirty[0] & /*MPAP, PAWP, CI*/ 688128) {
-    			$$invalidate(32, PVRI = 80 * (MPAP - PAWP) / CI);
+    			$$invalidate(32, PVRI = (MPAP - PAWP) / CI);
     		}
 
     		if ($$self.$$.dirty[0] & /*PASP, PADP, CVP*/ 3584) {

@@ -31,10 +31,10 @@
   $: CPO = (MAP * CO) / 451; // Cardiac Power Output
   $: CI = CO / BSA; // Cardiac Index
 
-  $: SVR = (80 * (MAP - CVP)) / CO;
-  $: SVRI = (80 * (MAP - CVP)) / CI;
-  $: PVR = (80 * (MPAP - PAWP)) / CO;
-  $: PVRI = (80 * (MPAP - PAWP)) / CI;
+  $: SVR = (MAP - CVP) / CO;
+  $: SVRI = (MAP - CVP) / CI;
+  $: PVR = (MPAP - PAWP) / CO;
+  $: PVRI = (MPAP - PAWP) / CI;
 
   $: MAP = (SBP + 2 * DBP) / 3;
   $: MPAP = (PASP + 2 * PADP) / 3;
@@ -90,7 +90,7 @@
             max={8}
             on:eq={() =>
               (equation =
-                "\\text{CO} = \\frac{O_2\\text{ delivery}}{(S_aO_2 - S_vO_2)\\times 0.01\\times \\text{Hgb}\\times 13.4}=\\frac{\\text{HR}\\times\\text{SV}}{1000}(4 - 8\\,L/min)")}
+                "\\text{CO} = \\frac{O_2\\text{ delivery}}{(S_aO_2 - S_vO_2)\\times 0.01\\times \\text{Hgb}\\times 13.4}=\\frac{\\text{HR}\\times\\text{SV}}{1000}(4 - 8\\;L/min)")}
           >
             Cardiac output (CO):
           </Calculated>
@@ -101,7 +101,7 @@
             max={4}
             on:eq={() => {
               equation =
-                "\\text{CI} = \\frac{\\text{CO}}{\\text{body surface area}}\\,(2 - 4\\,L/min/m^2)";
+                "\\text{CI} = \\frac{\\text{CO}}{\\text{body surface area}}\\;(2 - 4\\;L/min/m^2)";
             }}
           >
             Cardiac index (CI):
@@ -111,7 +111,7 @@
             data={CPO}
             on:eq={() =>
               (equation =
-                "\\text{CPO}=\\frac{\\text{MAP}\\times \\text{CO}}{451}\\,(W)")}
+                "\\text{CPO}=\\frac{\\text{MAP}\\times \\text{CO}}{451}\\;(W)")}
             >Cardiac power output (CPO):</Calculated
           >
 
@@ -121,7 +121,7 @@
             max={100}
             on:eq={() =>
               (equation =
-                "\\text{SV}=\\frac{\\text{CO}}{\\text{HR}}\\times 1000\\,(60 - 80\\,ml/beat)")}
+                "\\text{SV}=\\frac{\\text{CO}}{\\text{HR}}\\times 1000\\;(60 - 80\\;ml/beat)")}
           >
             Stroke volume (SV):</Calculated
           >
@@ -132,7 +132,7 @@
             max={47}
             on:eq={() =>
               (equation =
-                "\\text{SVI}=\\frac{\\text{CI}}{\\text{HR}}\\times 1000\\,(33 - 47\\,ml/m^2/beat)")}
+                "\\text{SVI}=\\frac{\\text{CI}}{\\text{HR}}\\times 1000\\;(33 - 47\\;ml/m^2/beat)")}
             >Stroke volume index (SVI):</Calculated
           >
 
@@ -142,28 +142,28 @@
             max={105}
             on:eq={() =>
               (equation =
-                "\\text{MAP} = \\frac{\\text{SBP} + 2\\times \\text{DBP}}{3}\\,(70-105\\,mmHg)")}
+                "\\text{MAP} = \\frac{\\text{SBP} + 2\\times \\text{DBP}}{3}\\;(70-105\\;mmHg)")}
             >Mean artery pressure (MAP):</Calculated
           >
 
           <Calculated
             data={SVR}
-            min={700}
-            max={1600}
+            min={8}
+            max={20}
             on:eq={() =>
               (equation =
-                "\\text{SVR} = \\frac{80\\times(\\text{MAP} - \\text{CVP})}{\\text{CO}}\\,(700-1600\\,dynes · sec/cm^5)")}
+                "\\text{SVR} = \\frac{\\text{MAP} - \\text{CVP}}{\\text{CO}}\\;(8-20\\;mmHg·min/L)")}
           >
             Systemic vascular resistance (SVR):
           </Calculated>
 
           <Calculated
             data={SVRI}
-            min={1970}
-            max={2390}
+            min={24}
+            max={30}
             on:eq={() =>
               (equation =
-                "\\text{SVRI} = \\frac{80\\times (\\text{MAP} - \\text{CVP})}{\\text{CI}}\\,1970 – 2390\\,dynes · sec/cm^5/m^2")}
+                "\\text{SVRI} = \\frac{\\text{MAP} - \\text{CVP}}{\\text{CI}}\\;(24 – 30\\;mmHg·min/L/m^2)")}
           >
             Systemic vascular resistance index (SVRI):
           </Calculated>
@@ -174,28 +174,28 @@
             max={20}
             on:eq={() =>
               (equation =
-                "\\text{mPAP} = \\frac{\\text{PASP} + 2\\times \\text{PADP}}{3}\\,(10-20\\,mmHg)")}
+                "\\text{mPAP} = \\frac{\\text{PASP} + 2\\times \\text{PADP}}{3}\\;(10-20\\;mmHg)")}
           >
             Mean pulmonary artery pressure (mPAP):
           </Calculated>
 
           <Calculated
             data={PVR}
-            max={250}
+            max={3}
             on:eq={() =>
               (equation =
-                "\\text{PVR} = \\frac{80\\times(\\text{mPAP} - \\text{PAWP})}{\\text{CO}}\\,(<250\\,dynes · sec/cm^5)")}
+                "\\text{PVR} = \\frac{\\text{TPG}}{\\text{CO}}\\;(<3\\;mmHg·min/L)")}
           >
             Pulmonary vascular resistance (PVR):
           </Calculated>
 
           <Calculated
             data={PVRI}
-            min={255}
-            max={285}
+            min={3}
+            max={3.6}
             on:eq={() =>
               (equation =
-                "\\text{PVRI} = \\frac{80\\times(\\text{mPAP} - \\text{PAWP})}{\\text{CI}}\\,(255-285\\,dynes · sec/cm^5/m^2")}
+                "\\text{PVRI} = \\frac{\\text{TPG}}{\\text{CI}}\\;(3-3.6\\;mmHg·min/L/m^2)")}
           >
             Pulmonary vascular resistance index (PVRI):
           </Calculated>
@@ -212,7 +212,7 @@
           <Calculated
             data={TPG}
             on:eq={() =>
-              (equation = "\\text{TPG} = \\text{mPAP} - \\text{PAWP}\\,(mmHg)")}
+              (equation = "\\text{TPG} = \\text{mPAP} - \\text{PAWP}\\;(mmHg)")}
           >
             Transpulmonary pressure gradient (TPG):
           </Calculated>
@@ -222,7 +222,7 @@
             min={5}
             max={10}
             on:eq={() =>
-              (equation = "\\text{DPG} = \\text{PADP} - \\text{PAWP}\\,(mmHg)")}
+              (equation = "\\text{DPG} = \\text{PADP} - \\text{PAWP}\\;(mmHg)")}
           >
             Diastolic pressure gradient (DPG):
           </Calculated>
@@ -233,7 +233,7 @@
             max={104}
             on:eq={() =>
               (equation =
-                "\\text{LVSW} = \\text{SV}\\times(\\text{MAP} - \\text{PAWP})\\times 0.0136\\,(58 - 104\\,gm·m/beat)")}
+                "\\text{LVSW} = \\text{SV}\\times(\\text{MAP} - \\text{PAWP})\\times 0.0136\\;(58 - 104\\;gm·m/beat)")}
           >
             Left ventricular stroke work (LVSW):
           </Calculated>
@@ -244,7 +244,7 @@
             max={62}
             on:eq={() =>
               (equation =
-                "\\text{LVSWI} = \\text{SVI}\\times(\\text{PAWP} - \\text{CVP})\\times 0.0136\\,(50 - 62\\,gm·m/m^2/beat)")}
+                "\\text{LVSWI} = \\text{SVI}\\times(\\text{PAWP} - \\text{CVP})\\times 0.0136\\;(50 - 62\\;gm·m/m^2/beat)")}
           >
             Left ventricular stroke work index (LVSWI):
           </Calculated>
@@ -255,7 +255,7 @@
             max={16}
             on:eq={() =>
               (equation =
-                "\\text{RVSW} = \\text{SV}\\times(\\text{mPAP} - \\text{CVP})\\times 0.0136\\,(8 - 16\\,gm·m/beat)")}
+                "\\text{RVSW} = \\text{SV}\\times(\\text{mPAP} - \\text{CVP})\\times 0.0136\\;(8 - 16\\;gm·m/beat)")}
           >
             Right ventricular stroke work (RVSW):
           </Calculated>
@@ -266,7 +266,7 @@
             max={10}
             on:eq={() =>
               (equation =
-                "\\text{RVSWI} = \\text{SVI}\\times(\\text{mPAP} - \\text{CVP})\\times 0.0136\\,(5 - 10\\,gm·m/m^2/beat)")}
+                "\\text{RVSWI} = \\text{SVI}\\times(\\text{mPAP} - \\text{CVP})\\times 0.0136\\;(5 - 10\\;gm·m/m^2/beat)")}
           >
             Right ventricular stroke work index (RVSWI):
           </Calculated>
