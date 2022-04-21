@@ -81,7 +81,7 @@
         <div
           class="flex items-center justify-center w-full h-24 py-2 my-2 overflow-x-auto font-serif text-sm rounded-md bg-zinc-100"
         >
-          <div>{@html katexString}</div>
+          <div class="flex-none w-full">{@html katexString}</div>
         </div>
         <div class="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 gap-x-10">
           <Calculated
