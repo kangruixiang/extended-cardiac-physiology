@@ -49,6 +49,9 @@
 
   $: TPG = MPAP - PAWP;
   $: DPG = PADP - PAWP;
+  $: SaO2 < SvO2 ? (SvO2 = SaO2) : null;
+  $: SBP < DBP ? (DBP = SBP) : null;
+  $: PASP < PADP ? (PADP = PASP) : null;
 
   let equation = "\\text{Click on a Variable Below To See Formula}";
 

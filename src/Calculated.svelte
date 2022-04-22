@@ -20,6 +20,6 @@
     class="font-semibold text-right"
     class:warning={data < min || data > max}
   >
-    {data.toFixed(1)}
+    {data >= 0 ? data.toFixed(1) : (data = 0)}
   </div>
 </div>

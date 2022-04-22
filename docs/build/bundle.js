@@ -18805,7 +18805,11 @@ var app = (function () {
     	let t0;
     	let t1;
     	let div1;
-    	let t2_value = /*data*/ ctx[0].toFixed(1) + "";
+
+    	let t2_value = (/*data*/ ctx[0] >= 0
+    	? /*data*/ ctx[0].toFixed(1)
+    	: /*data*/ ctx[0] = 0) + "";
+
     	let t2;
     	let current;
     	let mounted;
@@ -18868,7 +18872,9 @@ var app = (function () {
     				}
     			}
 
-    			if ((!current || dirty & /*data*/ 1) && t2_value !== (t2_value = /*data*/ ctx[0].toFixed(1) + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*data*/ 1) && t2_value !== (t2_value = (/*data*/ ctx[0] >= 0
+    			? /*data*/ ctx[0].toFixed(1)
+    			: /*data*/ ctx[0] = 0) + "")) set_data_dev(t2, t2_value);
 
     			if (dirty & /*data, min, max*/ 7) {
     				toggle_class(div1, "warning", /*data*/ ctx[0] < /*min*/ ctx[1] || /*data*/ ctx[0] > /*max*/ ctx[2]);
@@ -18999,7 +19005,7 @@ var app = (function () {
     const { console: console_1 } = globals;
     const file = "src\\App.svelte";
 
-    // (87:10) <Calculated             data={CO}             min={4}             max={8}             on:eq={() =>               (equation =                 "\\text{CO} = \\frac{O_2\\text{ delivery}}{(S_aO_2 - S_vO_2)\\times 0.01\\times \\text{Hgb}\\times 13.4}=\\frac{\\text{HR}\\times\\text{SV}}{1000}(4 - 8\\;L/min)")}           >
+    // (90:10) <Calculated             data={CO}             min={4}             max={8}             on:eq={() =>               (equation =                 "\\text{CO} = \\frac{O_2\\text{ delivery}}{(S_aO_2 - S_vO_2)\\times 0.01\\times \\text{Hgb}\\times 13.4}=\\frac{\\text{HR}\\times\\text{SV}}{1000}(4 - 8\\;L/min)")}           >
     function create_default_slot_33(ctx) {
     	let t;
 
@@ -19019,14 +19025,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_33.name,
     		type: "slot",
-    		source: "(87:10) <Calculated             data={CO}             min={4}             max={8}             on:eq={() =>               (equation =                 \\\"\\\\text{CO} = \\\\frac{O_2\\\\text{ delivery}}{(S_aO_2 - S_vO_2)\\\\times 0.01\\\\times \\\\text{Hgb}\\\\times 13.4}=\\\\frac{\\\\text{HR}\\\\times\\\\text{SV}}{1000}(4 - 8\\\\;L/min)\\\")}           >",
+    		source: "(90:10) <Calculated             data={CO}             min={4}             max={8}             on:eq={() =>               (equation =                 \\\"\\\\text{CO} = \\\\frac{O_2\\\\text{ delivery}}{(S_aO_2 - S_vO_2)\\\\times 0.01\\\\times \\\\text{Hgb}\\\\times 13.4}=\\\\frac{\\\\text{HR}\\\\times\\\\text{SV}}{1000}(4 - 8\\\\;L/min)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (98:10) <Calculated             data={CI}             min={2}             max={4}             on:eq={() => {               equation =                 "\\text{CI} = \\frac{\\text{CO}}{\\text{body surface area}}\\;(2 - 4\\;L/min/m^2)";             }}           >
+    // (101:10) <Calculated             data={CI}             min={2}             max={4}             on:eq={() => {               equation =                 "\\text{CI} = \\frac{\\text{CO}}{\\text{body surface area}}\\;(2 - 4\\;L/min/m^2)";             }}           >
     function create_default_slot_32(ctx) {
     	let t;
 
@@ -19046,14 +19052,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_32.name,
     		type: "slot",
-    		source: "(98:10) <Calculated             data={CI}             min={2}             max={4}             on:eq={() => {               equation =                 \\\"\\\\text{CI} = \\\\frac{\\\\text{CO}}{\\\\text{body surface area}}\\\\;(2 - 4\\\\;L/min/m^2)\\\";             }}           >",
+    		source: "(101:10) <Calculated             data={CI}             min={2}             max={4}             on:eq={() => {               equation =                 \\\"\\\\text{CI} = \\\\frac{\\\\text{CO}}{\\\\text{body surface area}}\\\\;(2 - 4\\\\;L/min/m^2)\\\";             }}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (110:10) <Calculated             data={CPO}             on:eq={() =>               (equation =                 "\\text{CPO}=\\frac{\\text{MAP}\\times \\text{CO}}{451}\\;(W)")}             >
+    // (113:10) <Calculated             data={CPO}             on:eq={() =>               (equation =                 "\\text{CPO}=\\frac{\\text{MAP}\\times \\text{CO}}{451}\\;(W)")}             >
     function create_default_slot_31(ctx) {
     	let t;
 
@@ -19073,14 +19079,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_31.name,
     		type: "slot",
-    		source: "(110:10) <Calculated             data={CPO}             on:eq={() =>               (equation =                 \\\"\\\\text{CPO}=\\\\frac{\\\\text{MAP}\\\\times \\\\text{CO}}{451}\\\\;(W)\\\")}             >",
+    		source: "(113:10) <Calculated             data={CPO}             on:eq={() =>               (equation =                 \\\"\\\\text{CPO}=\\\\frac{\\\\text{MAP}\\\\times \\\\text{CO}}{451}\\\\;(W)\\\")}             >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (118:10) <Calculated             data={SV}             min={60}             max={100}             on:eq={() =>               (equation =                 "\\text{SV}=\\frac{\\text{CO}}{\\text{HR}}\\times 1000\\;(60 - 80\\;ml/beat)")}           >
+    // (121:10) <Calculated             data={SV}             min={60}             max={100}             on:eq={() =>               (equation =                 "\\text{SV}=\\frac{\\text{CO}}{\\text{HR}}\\times 1000\\;(60 - 80\\;ml/beat)")}           >
     function create_default_slot_30(ctx) {
     	let t;
 
@@ -19100,14 +19106,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_30.name,
     		type: "slot",
-    		source: "(118:10) <Calculated             data={SV}             min={60}             max={100}             on:eq={() =>               (equation =                 \\\"\\\\text{SV}=\\\\frac{\\\\text{CO}}{\\\\text{HR}}\\\\times 1000\\\\;(60 - 80\\\\;ml/beat)\\\")}           >",
+    		source: "(121:10) <Calculated             data={SV}             min={60}             max={100}             on:eq={() =>               (equation =                 \\\"\\\\text{SV}=\\\\frac{\\\\text{CO}}{\\\\text{HR}}\\\\times 1000\\\\;(60 - 80\\\\;ml/beat)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (129:10) <Calculated             data={SVI}             min={33}             max={47}             on:eq={() =>               (equation =                 "\\text{SVI}=\\frac{\\text{CI}}{\\text{HR}}\\times 1000\\;(33 - 47\\;ml/m^2/beat)")}             >
+    // (132:10) <Calculated             data={SVI}             min={33}             max={47}             on:eq={() =>               (equation =                 "\\text{SVI}=\\frac{\\text{CI}}{\\text{HR}}\\times 1000\\;(33 - 47\\;ml/m^2/beat)")}             >
     function create_default_slot_29(ctx) {
     	let t;
 
@@ -19127,14 +19133,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_29.name,
     		type: "slot",
-    		source: "(129:10) <Calculated             data={SVI}             min={33}             max={47}             on:eq={() =>               (equation =                 \\\"\\\\text{SVI}=\\\\frac{\\\\text{CI}}{\\\\text{HR}}\\\\times 1000\\\\;(33 - 47\\\\;ml/m^2/beat)\\\")}             >",
+    		source: "(132:10) <Calculated             data={SVI}             min={33}             max={47}             on:eq={() =>               (equation =                 \\\"\\\\text{SVI}=\\\\frac{\\\\text{CI}}{\\\\text{HR}}\\\\times 1000\\\\;(33 - 47\\\\;ml/m^2/beat)\\\")}             >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (139:10) <Calculated             data={MAP}             min={70}             max={105}             on:eq={() =>               (equation =                 "\\text{MAP} = \\frac{\\text{SBP} + 2\\times \\text{DBP}}{3}\\;(70-105\\;mmHg)")}             >
+    // (142:10) <Calculated             data={MAP}             min={70}             max={105}             on:eq={() =>               (equation =                 "\\text{MAP} = \\frac{\\text{SBP} + 2\\times \\text{DBP}}{3}\\;(70-105\\;mmHg)")}             >
     function create_default_slot_28(ctx) {
     	let t;
 
@@ -19154,14 +19160,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_28.name,
     		type: "slot",
-    		source: "(139:10) <Calculated             data={MAP}             min={70}             max={105}             on:eq={() =>               (equation =                 \\\"\\\\text{MAP} = \\\\frac{\\\\text{SBP} + 2\\\\times \\\\text{DBP}}{3}\\\\;(70-105\\\\;mmHg)\\\")}             >",
+    		source: "(142:10) <Calculated             data={MAP}             min={70}             max={105}             on:eq={() =>               (equation =                 \\\"\\\\text{MAP} = \\\\frac{\\\\text{SBP} + 2\\\\times \\\\text{DBP}}{3}\\\\;(70-105\\\\;mmHg)\\\")}             >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (149:10) <Calculated             data={SVR}             min={8}             max={20}             on:eq={() =>               (equation =                 "\\text{SVR} = \\frac{\\text{MAP} - \\text{CVP}}{\\text{CO}}\\;(8-20\\;mmHg·min/L)")}           >
+    // (152:10) <Calculated             data={SVR}             min={8}             max={20}             on:eq={() =>               (equation =                 "\\text{SVR} = \\frac{\\text{MAP} - \\text{CVP}}{\\text{CO}}\\;(8-20\\;mmHg·min/L)")}           >
     function create_default_slot_27(ctx) {
     	let t;
 
@@ -19181,14 +19187,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_27.name,
     		type: "slot",
-    		source: "(149:10) <Calculated             data={SVR}             min={8}             max={20}             on:eq={() =>               (equation =                 \\\"\\\\text{SVR} = \\\\frac{\\\\text{MAP} - \\\\text{CVP}}{\\\\text{CO}}\\\\;(8-20\\\\;mmHg·min/L)\\\")}           >",
+    		source: "(152:10) <Calculated             data={SVR}             min={8}             max={20}             on:eq={() =>               (equation =                 \\\"\\\\text{SVR} = \\\\frac{\\\\text{MAP} - \\\\text{CVP}}{\\\\text{CO}}\\\\;(8-20\\\\;mmHg·min/L)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (160:10) <Calculated             data={SVRI}             min={24}             max={30}             on:eq={() =>               (equation =                 "\\text{SVRI} = \\frac{\\text{MAP} - \\text{CVP}}{\\text{CI}}\\;(24 – 30\\;mmHg·min/L/m^2)")}           >
+    // (163:10) <Calculated             data={SVRI}             min={24}             max={30}             on:eq={() =>               (equation =                 "\\text{SVRI} = \\frac{\\text{MAP} - \\text{CVP}}{\\text{CI}}\\;(24 – 30\\;mmHg·min/L/m^2)")}           >
     function create_default_slot_26(ctx) {
     	let t;
 
@@ -19208,14 +19214,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_26.name,
     		type: "slot",
-    		source: "(160:10) <Calculated             data={SVRI}             min={24}             max={30}             on:eq={() =>               (equation =                 \\\"\\\\text{SVRI} = \\\\frac{\\\\text{MAP} - \\\\text{CVP}}{\\\\text{CI}}\\\\;(24 – 30\\\\;mmHg·min/L/m^2)\\\")}           >",
+    		source: "(163:10) <Calculated             data={SVRI}             min={24}             max={30}             on:eq={() =>               (equation =                 \\\"\\\\text{SVRI} = \\\\frac{\\\\text{MAP} - \\\\text{CVP}}{\\\\text{CI}}\\\\;(24 – 30\\\\;mmHg·min/L/m^2)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (171:10) <Calculated             data={MPAP}             min={10}             max={20}             on:eq={() =>               (equation =                 "\\text{mPAP} = \\frac{\\text{PASP} + 2\\times \\text{PADP}}{3}\\;(10-20\\;mmHg)")}           >
+    // (174:10) <Calculated             data={MPAP}             min={10}             max={20}             on:eq={() =>               (equation =                 "\\text{mPAP} = \\frac{\\text{PASP} + 2\\times \\text{PADP}}{3}\\;(10-20\\;mmHg)")}           >
     function create_default_slot_25(ctx) {
     	let t;
 
@@ -19235,14 +19241,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_25.name,
     		type: "slot",
-    		source: "(171:10) <Calculated             data={MPAP}             min={10}             max={20}             on:eq={() =>               (equation =                 \\\"\\\\text{mPAP} = \\\\frac{\\\\text{PASP} + 2\\\\times \\\\text{PADP}}{3}\\\\;(10-20\\\\;mmHg)\\\")}           >",
+    		source: "(174:10) <Calculated             data={MPAP}             min={10}             max={20}             on:eq={() =>               (equation =                 \\\"\\\\text{mPAP} = \\\\frac{\\\\text{PASP} + 2\\\\times \\\\text{PADP}}{3}\\\\;(10-20\\\\;mmHg)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (182:10) <Calculated             data={PVR}             max={3}             on:eq={() =>               (equation =                 "\\text{PVR} = \\frac{\\text{TPG}}{\\text{CO}}\\;(<3\\;mmHg·min/L)")}           >
+    // (185:10) <Calculated             data={PVR}             max={3}             on:eq={() =>               (equation =                 "\\text{PVR} = \\frac{\\text{TPG}}{\\text{CO}}\\;(<3\\;mmHg·min/L)")}           >
     function create_default_slot_24(ctx) {
     	let t;
 
@@ -19262,14 +19268,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_24.name,
     		type: "slot",
-    		source: "(182:10) <Calculated             data={PVR}             max={3}             on:eq={() =>               (equation =                 \\\"\\\\text{PVR} = \\\\frac{\\\\text{TPG}}{\\\\text{CO}}\\\\;(<3\\\\;mmHg·min/L)\\\")}           >",
+    		source: "(185:10) <Calculated             data={PVR}             max={3}             on:eq={() =>               (equation =                 \\\"\\\\text{PVR} = \\\\frac{\\\\text{TPG}}{\\\\text{CO}}\\\\;(<3\\\\;mmHg·min/L)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (192:10) <Calculated             data={PVRI}             min={3}             max={3.6}             on:eq={() =>               (equation =                 "\\text{PVRI} = \\frac{\\text{TPG}}{\\text{CI}}\\;(3-3.6\\;mmHg·min/L/m^2)")}           >
+    // (195:10) <Calculated             data={PVRI}             min={3}             max={3.6}             on:eq={() =>               (equation =                 "\\text{PVRI} = \\frac{\\text{TPG}}{\\text{CI}}\\;(3-3.6\\;mmHg·min/L/m^2)")}           >
     function create_default_slot_23(ctx) {
     	let t;
 
@@ -19289,14 +19295,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_23.name,
     		type: "slot",
-    		source: "(192:10) <Calculated             data={PVRI}             min={3}             max={3.6}             on:eq={() =>               (equation =                 \\\"\\\\text{PVRI} = \\\\frac{\\\\text{TPG}}{\\\\text{CI}}\\\\;(3-3.6\\\\;mmHg·min/L/m^2)\\\")}           >",
+    		source: "(195:10) <Calculated             data={PVRI}             min={3}             max={3.6}             on:eq={() =>               (equation =                 \\\"\\\\text{PVRI} = \\\\frac{\\\\text{TPG}}{\\\\text{CI}}\\\\;(3-3.6\\\\;mmHg·min/L/m^2)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (203:10) <Calculated             data={PAPI}             on:eq={() =>               (equation =                 "\\text{PAPi} = \\frac{\\text{PASP} - \\text{PADP}}{\\text{CVP}}")}           >
+    // (206:10) <Calculated             data={PAPI}             on:eq={() =>               (equation =                 "\\text{PAPi} = \\frac{\\text{PASP} - \\text{PADP}}{\\text{CVP}}")}           >
     function create_default_slot_22(ctx) {
     	let t;
 
@@ -19316,14 +19322,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_22.name,
     		type: "slot",
-    		source: "(203:10) <Calculated             data={PAPI}             on:eq={() =>               (equation =                 \\\"\\\\text{PAPi} = \\\\frac{\\\\text{PASP} - \\\\text{PADP}}{\\\\text{CVP}}\\\")}           >",
+    		source: "(206:10) <Calculated             data={PAPI}             on:eq={() =>               (equation =                 \\\"\\\\text{PAPi} = \\\\frac{\\\\text{PASP} - \\\\text{PADP}}{\\\\text{CVP}}\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (212:10) <Calculated             data={TPG}             on:eq={() =>               (equation = "\\text{TPG} = \\text{mPAP} - \\text{PAWP}\\;(mmHg)")}           >
+    // (215:10) <Calculated             data={TPG}             on:eq={() =>               (equation = "\\text{TPG} = \\text{mPAP} - \\text{PAWP}\\;(mmHg)")}           >
     function create_default_slot_21(ctx) {
     	let t;
 
@@ -19343,14 +19349,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_21.name,
     		type: "slot",
-    		source: "(212:10) <Calculated             data={TPG}             on:eq={() =>               (equation = \\\"\\\\text{TPG} = \\\\text{mPAP} - \\\\text{PAWP}\\\\;(mmHg)\\\")}           >",
+    		source: "(215:10) <Calculated             data={TPG}             on:eq={() =>               (equation = \\\"\\\\text{TPG} = \\\\text{mPAP} - \\\\text{PAWP}\\\\;(mmHg)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (220:10) <Calculated             data={DPG}             min={5}             max={10}             on:eq={() =>               (equation = "\\text{DPG} = \\text{PADP} - \\text{PAWP}\\;(mmHg)")}           >
+    // (223:10) <Calculated             data={DPG}             min={5}             max={10}             on:eq={() =>               (equation = "\\text{DPG} = \\text{PADP} - \\text{PAWP}\\;(mmHg)")}           >
     function create_default_slot_20(ctx) {
     	let t;
 
@@ -19370,14 +19376,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_20.name,
     		type: "slot",
-    		source: "(220:10) <Calculated             data={DPG}             min={5}             max={10}             on:eq={() =>               (equation = \\\"\\\\text{DPG} = \\\\text{PADP} - \\\\text{PAWP}\\\\;(mmHg)\\\")}           >",
+    		source: "(223:10) <Calculated             data={DPG}             min={5}             max={10}             on:eq={() =>               (equation = \\\"\\\\text{DPG} = \\\\text{PADP} - \\\\text{PAWP}\\\\;(mmHg)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (230:10) <Calculated             data={LVSW}             min={58}             max={104}             on:eq={() =>               (equation =                 "\\text{LVSW} = \\text{SV}\\times(\\text{MAP} - \\text{PAWP})\\times 0.0136\\;(58 - 104\\;gm·m/beat)")}           >
+    // (233:10) <Calculated             data={LVSW}             min={58}             max={104}             on:eq={() =>               (equation =                 "\\text{LVSW} = \\text{SV}\\times(\\text{MAP} - \\text{PAWP})\\times 0.0136\\;(58 - 104\\;gm·m/beat)")}           >
     function create_default_slot_19(ctx) {
     	let t;
 
@@ -19397,14 +19403,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_19.name,
     		type: "slot",
-    		source: "(230:10) <Calculated             data={LVSW}             min={58}             max={104}             on:eq={() =>               (equation =                 \\\"\\\\text{LVSW} = \\\\text{SV}\\\\times(\\\\text{MAP} - \\\\text{PAWP})\\\\times 0.0136\\\\;(58 - 104\\\\;gm·m/beat)\\\")}           >",
+    		source: "(233:10) <Calculated             data={LVSW}             min={58}             max={104}             on:eq={() =>               (equation =                 \\\"\\\\text{LVSW} = \\\\text{SV}\\\\times(\\\\text{MAP} - \\\\text{PAWP})\\\\times 0.0136\\\\;(58 - 104\\\\;gm·m/beat)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (241:10) <Calculated             data={LVSWI}             min={50}             max={62}             on:eq={() =>               (equation =                 "\\text{LVSWI} = \\text{SVI}\\times(\\text{PAWP} - \\text{CVP})\\times 0.0136\\;(50 - 62\\;gm·m/m^2/beat)")}           >
+    // (244:10) <Calculated             data={LVSWI}             min={50}             max={62}             on:eq={() =>               (equation =                 "\\text{LVSWI} = \\text{SVI}\\times(\\text{PAWP} - \\text{CVP})\\times 0.0136\\;(50 - 62\\;gm·m/m^2/beat)")}           >
     function create_default_slot_18(ctx) {
     	let t;
 
@@ -19424,14 +19430,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_18.name,
     		type: "slot",
-    		source: "(241:10) <Calculated             data={LVSWI}             min={50}             max={62}             on:eq={() =>               (equation =                 \\\"\\\\text{LVSWI} = \\\\text{SVI}\\\\times(\\\\text{PAWP} - \\\\text{CVP})\\\\times 0.0136\\\\;(50 - 62\\\\;gm·m/m^2/beat)\\\")}           >",
+    		source: "(244:10) <Calculated             data={LVSWI}             min={50}             max={62}             on:eq={() =>               (equation =                 \\\"\\\\text{LVSWI} = \\\\text{SVI}\\\\times(\\\\text{PAWP} - \\\\text{CVP})\\\\times 0.0136\\\\;(50 - 62\\\\;gm·m/m^2/beat)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (252:10) <Calculated             data={RVSW}             min={8}             max={16}             on:eq={() =>               (equation =                 "\\text{RVSW} = \\text{SV}\\times(\\text{mPAP} - \\text{CVP})\\times 0.0136\\;(8 - 16\\;gm·m/beat)")}           >
+    // (255:10) <Calculated             data={RVSW}             min={8}             max={16}             on:eq={() =>               (equation =                 "\\text{RVSW} = \\text{SV}\\times(\\text{mPAP} - \\text{CVP})\\times 0.0136\\;(8 - 16\\;gm·m/beat)")}           >
     function create_default_slot_17(ctx) {
     	let t;
 
@@ -19451,14 +19457,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_17.name,
     		type: "slot",
-    		source: "(252:10) <Calculated             data={RVSW}             min={8}             max={16}             on:eq={() =>               (equation =                 \\\"\\\\text{RVSW} = \\\\text{SV}\\\\times(\\\\text{mPAP} - \\\\text{CVP})\\\\times 0.0136\\\\;(8 - 16\\\\;gm·m/beat)\\\")}           >",
+    		source: "(255:10) <Calculated             data={RVSW}             min={8}             max={16}             on:eq={() =>               (equation =                 \\\"\\\\text{RVSW} = \\\\text{SV}\\\\times(\\\\text{mPAP} - \\\\text{CVP})\\\\times 0.0136\\\\;(8 - 16\\\\;gm·m/beat)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (263:10) <Calculated             data={RVSWI}             min={5}             max={10}             on:eq={() =>               (equation =                 "\\text{RVSWI} = \\text{SVI}\\times(\\text{mPAP} - \\text{CVP})\\times 0.0136\\;(5 - 10\\;gm·m/m^2/beat)")}           >
+    // (266:10) <Calculated             data={RVSWI}             min={5}             max={10}             on:eq={() =>               (equation =                 "\\text{RVSWI} = \\text{SVI}\\times(\\text{mPAP} - \\text{CVP})\\times 0.0136\\;(5 - 10\\;gm·m/m^2/beat)")}           >
     function create_default_slot_16(ctx) {
     	let t;
 
@@ -19478,14 +19484,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_16.name,
     		type: "slot",
-    		source: "(263:10) <Calculated             data={RVSWI}             min={5}             max={10}             on:eq={() =>               (equation =                 \\\"\\\\text{RVSWI} = \\\\text{SVI}\\\\times(\\\\text{mPAP} - \\\\text{CVP})\\\\times 0.0136\\\\;(5 - 10\\\\;gm·m/m^2/beat)\\\")}           >",
+    		source: "(266:10) <Calculated             data={RVSWI}             min={5}             max={10}             on:eq={() =>               (equation =                 \\\"\\\\text{RVSWI} = \\\\text{SVI}\\\\times(\\\\text{mPAP} - \\\\text{CVP})\\\\times 0.0136\\\\;(5 - 10\\\\;gm·m/m^2/beat)\\\")}           >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (278:8) <Dynamic min={40} max={300} bind:result={LB}>
+    // (281:8) <Dynamic min={40} max={300} bind:result={LB}>
     function create_default_slot_15(ctx) {
     	let t0;
     	let t1_value = Math.round(/*KG*/ ctx[22]) + "";
@@ -19517,14 +19523,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_15.name,
     		type: "slot",
-    		source: "(278:8) <Dynamic min={40} max={300} bind:result={LB}>",
+    		source: "(281:8) <Dynamic min={40} max={300} bind:result={LB}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (283:8) <Dynamic min={53} max={76} bind:result={inches}>
+    // (286:8) <Dynamic min={53} max={76} bind:result={inches}>
     function create_default_slot_14(ctx) {
     	let t0;
     	let t1_value = Math.floor(/*feet*/ ctx[20]) + "";
@@ -19576,14 +19582,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_14.name,
     		type: "slot",
-    		source: "(283:8) <Dynamic min={53} max={76} bind:result={inches}>",
+    		source: "(286:8) <Dynamic min={53} max={76} bind:result={inches}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (289:8) <Dynamic min={60} max={100} bind:result={SaO2}>
+    // (292:8) <Dynamic min={60} max={100} bind:result={SaO2}>
     function create_default_slot_13(ctx) {
     	let t;
 
@@ -19603,14 +19609,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_13.name,
     		type: "slot",
-    		source: "(289:8) <Dynamic min={60} max={100} bind:result={SaO2}>",
+    		source: "(292:8) <Dynamic min={60} max={100} bind:result={SaO2}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (291:8) <Dynamic min={30} max={100} bind:result={SvO2}>
+    // (294:8) <Dynamic min={30} max={100} bind:result={SvO2}>
     function create_default_slot_12(ctx) {
     	let t;
 
@@ -19630,14 +19636,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12.name,
     		type: "slot",
-    		source: "(291:8) <Dynamic min={30} max={100} bind:result={SvO2}>",
+    		source: "(294:8) <Dynamic min={30} max={100} bind:result={SvO2}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (293:8) <Dynamic           min={4}           max={17}           step={0.1}           bind:result={HGB}           on:slide={() => {             HgbT;           }}         >
+    // (296:8) <Dynamic           min={4}           max={17}           step={0.1}           bind:result={HGB}           on:slide={() => {             HgbT;           }}         >
     function create_default_slot_11(ctx) {
     	let t;
 
@@ -19657,14 +19663,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11.name,
     		type: "slot",
-    		source: "(293:8) <Dynamic           min={4}           max={17}           step={0.1}           bind:result={HGB}           on:slide={() => {             HgbT;           }}         >",
+    		source: "(296:8) <Dynamic           min={4}           max={17}           step={0.1}           bind:result={HGB}           on:slide={() => {             HgbT;           }}         >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (305:8) <Dynamic min={1} max={100} bind:result={Age}>
+    // (308:8) <Dynamic min={1} max={100} bind:result={Age}>
     function create_default_slot_10(ctx) {
     	let t;
 
@@ -19684,14 +19690,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10.name,
     		type: "slot",
-    		source: "(305:8) <Dynamic min={1} max={100} bind:result={Age}>",
+    		source: "(308:8) <Dynamic min={1} max={100} bind:result={Age}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (307:8) <Dynamic           min={20}           max={200}           bind:result={HR}           on:slide={() => {             console.log(HR, SV, CO2);           }}>
+    // (310:8) <Dynamic           min={20}           max={200}           bind:result={HR}           on:slide={() => {             console.log(HR, SV, CO2);           }}>
     function create_default_slot_9(ctx) {
     	let t;
 
@@ -19711,14 +19717,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(307:8) <Dynamic           min={20}           max={200}           bind:result={HR}           on:slide={() => {             console.log(HR, SV, CO2);           }}>",
+    		source: "(310:8) <Dynamic           min={20}           max={200}           bind:result={HR}           on:slide={() => {             console.log(HR, SV, CO2);           }}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (316:8) <Dynamic min={1} max={15} bind:result={CO}>
+    // (319:8) <Dynamic min={1} max={15} bind:result={CO}>
     function create_default_slot_8(ctx) {
     	let t;
 
@@ -19738,14 +19744,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(316:8) <Dynamic min={1} max={15} bind:result={CO}>",
+    		source: "(319:8) <Dynamic min={1} max={15} bind:result={CO}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (320:8) <Dynamic           min={10}           max={150}           bind:result={SV}           on:slide={() => {             CO = CO2;           }}>
+    // (323:8) <Dynamic           min={10}           max={150}           bind:result={SV}           on:slide={() => {             CO = CO2;           }}>
     function create_default_slot_7(ctx) {
     	let t;
 
@@ -19765,14 +19771,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7.name,
     		type: "slot",
-    		source: "(320:8) <Dynamic           min={10}           max={150}           bind:result={SV}           on:slide={() => {             CO = CO2;           }}>",
+    		source: "(323:8) <Dynamic           min={10}           max={150}           bind:result={SV}           on:slide={() => {             CO = CO2;           }}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (329:8) <Dynamic min={0} max={100} bind:result={SVI}>
+    // (332:8) <Dynamic min={0} max={100} bind:result={SVI}>
     function create_default_slot_6(ctx) {
     	let t;
 
@@ -19792,14 +19798,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(329:8) <Dynamic min={0} max={100} bind:result={SVI}>",
+    		source: "(332:8) <Dynamic min={0} max={100} bind:result={SVI}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (333:8) <Dynamic min={60} max={240} bind:result={SBP}>
+    // (336:8) <Dynamic min={60} max={240} bind:result={SBP}>
     function create_default_slot_5(ctx) {
     	let t;
 
@@ -19819,14 +19825,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(333:8) <Dynamic min={60} max={240} bind:result={SBP}>",
+    		source: "(336:8) <Dynamic min={60} max={240} bind:result={SBP}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (337:8) <Dynamic min={10} max={120} bind:result={DBP}>
+    // (340:8) <Dynamic min={10} max={120} bind:result={DBP}>
     function create_default_slot_4(ctx) {
     	let t;
 
@@ -19846,14 +19852,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(337:8) <Dynamic min={10} max={120} bind:result={DBP}>",
+    		source: "(340:8) <Dynamic min={10} max={120} bind:result={DBP}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (341:8) <Dynamic min={15} max={25} bind:result={PASP}>
+    // (344:8) <Dynamic min={15} max={25} bind:result={PASP}>
     function create_default_slot_3(ctx) {
     	let t;
 
@@ -19873,14 +19879,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(341:8) <Dynamic min={15} max={25} bind:result={PASP}>",
+    		source: "(344:8) <Dynamic min={15} max={25} bind:result={PASP}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (345:8) <Dynamic min={8} max={15} bind:result={PADP}>
+    // (348:8) <Dynamic min={8} max={15} bind:result={PADP}>
     function create_default_slot_2(ctx) {
     	let t;
 
@@ -19900,14 +19906,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(345:8) <Dynamic min={8} max={15} bind:result={PADP}>",
+    		source: "(348:8) <Dynamic min={8} max={15} bind:result={PADP}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (349:8) <Dynamic min={0} max={20} bind:result={CVP}>
+    // (352:8) <Dynamic min={0} max={20} bind:result={CVP}>
     function create_default_slot_1(ctx) {
     	let t;
 
@@ -19927,14 +19933,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(349:8) <Dynamic min={0} max={20} bind:result={CVP}>",
+    		source: "(352:8) <Dynamic min={0} max={20} bind:result={CVP}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (351:8) <Dynamic min={0} max={35} bind:result={PAWP}>
+    // (354:8) <Dynamic min={0} max={35} bind:result={PAWP}>
     function create_default_slot(ctx) {
     	let t;
 
@@ -19954,7 +19960,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(351:8) <Dynamic min={0} max={35} bind:result={PAWP}>",
+    		source: "(354:8) <Dynamic min={0} max={35} bind:result={PAWP}>",
     		ctx
     	});
 
@@ -20669,36 +20675,36 @@ var app = (function () {
     			create_component(dynamic15.$$.fragment);
     			t37 = space();
     			div5 = element("div");
-    			t38 = text$2("Email me at ");
+    			t38 = text$2("Contact me on ");
     			a = element("a");
-    			a.textContent = "kangruixiang@gmail.com";
-    			t40 = text$2(" for questions or suggestions");
+    			a.textContent = "Github";
+    			t40 = text$2(" for questions or suggestions.");
     			attr_dev(link, "rel", "stylesheet");
     			attr_dev(link, "href", "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css");
     			attr_dev(link, "integrity", "sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X");
     			attr_dev(link, "crossorigin", "anonymous");
-    			add_location(link, file, 61, 2, 1720);
-    			add_location(h2, file, 79, 8, 2336);
+    			add_location(link, file, 64, 2, 1839);
+    			add_location(h2, file, 82, 8, 2455);
     			attr_dev(div0, "class", "flex-none w-full");
-    			add_location(div0, file, 83, 10, 2537);
+    			add_location(div0, file, 86, 10, 2656);
     			attr_dev(div1, "class", "flex items-center justify-center w-full h-24 py-2 my-2 overflow-x-auto font-serif text-sm rounded-md bg-zinc-100");
-    			add_location(div1, file, 80, 8, 2381);
+    			add_location(div1, file, 83, 8, 2500);
     			attr_dev(div2, "class", "grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 gap-x-10");
-    			add_location(div2, file, 85, 8, 2616);
+    			add_location(div2, file, 88, 8, 2735);
     			attr_dev(div3, "class", "py-4 overflow-y-auto border-b h-3/5 md:h-auto md:mb-12 top border-zinc-400");
-    			add_location(div3, file, 76, 6, 2224);
+    			add_location(div3, file, 79, 6, 2343);
     			attr_dev(div4, "class", "grid grid-cols-1 mt-4 overflow-y-auto h-2/5 md:h-auto md:mt-4 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-2 bottom");
-    			add_location(div4, file, 274, 6, 8375);
+    			add_location(div4, file, 277, 6, 8494);
     			attr_dev(a, "class", "font-sans hover:underline");
-    			attr_dev(a, "href", "mailto:kangruixiang@gmail.com");
-    			add_location(a, file, 355, 20, 10647);
+    			attr_dev(a, "href", "https://github.com/kangruixiang/extended-cardiac-physiology");
+    			add_location(a, file, 358, 22, 10768);
     			attr_dev(div5, "class", "text-sm font-semibold text-center md:mt-12");
-    			add_location(div5, file, 354, 6, 10570);
+    			add_location(div5, file, 357, 6, 10689);
     			attr_dev(div6, "class", "flex flex-col w-full px-2 my-2 rounded-lg lg:mx-12 lg:px-24 lg:my-12 lg:pt-24 lg:pb-12 lg:border-2 lg:border-solid lg:border-zinc-900");
-    			add_location(div6, file, 73, 4, 2059);
+    			add_location(div6, file, 76, 4, 2178);
     			attr_dev(div7, "class", "container flex justify-center w-full h-screen align-middle md:h-auto");
-    			add_location(div7, file, 70, 2, 1965);
-    			add_location(main, file, 69, 0, 1956);
+    			add_location(div7, file, 73, 2, 2084);
+    			add_location(main, file, 72, 0, 2075);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -21357,7 +21363,7 @@ var app = (function () {
 
     	function dynamic3_result_binding(value) {
     		SvO2 = value;
-    		$$invalidate(8, SvO2);
+    		($$invalidate(8, SvO2), $$invalidate(7, SaO2));
     	}
 
     	function dynamic4_result_binding(value) {
@@ -21408,7 +21414,7 @@ var app = (function () {
 
     	function dynamic11_result_binding(value) {
     		DBP = value;
-    		$$invalidate(14, DBP);
+    		($$invalidate(14, DBP), $$invalidate(13, SBP));
     	}
 
     	function dynamic12_result_binding(value) {
@@ -21418,7 +21424,7 @@ var app = (function () {
 
     	function dynamic13_result_binding(value) {
     		PADP = value;
-    		$$invalidate(11, PADP);
+    		($$invalidate(11, PADP), $$invalidate(10, PASP));
     	}
 
     	function dynamic14_result_binding(value) {
@@ -21553,6 +21559,10 @@ var app = (function () {
     			: $$invalidate(39, VO2 = 125 * BSA); // O2 delivery based on age and BSA
     		}
 
+    		if ($$self.$$.dirty[0] & /*SaO2, SvO2*/ 384) {
+    			SaO2 < SvO2 ? $$invalidate(8, SvO2 = SaO2) : null;
+    		}
+
     		if ($$self.$$.dirty[0] & /*SaO2, SvO2, HGB*/ 416 | $$self.$$.dirty[1] & /*VO2*/ 256) {
     			$$invalidate(1, CO = VO2 / ((SaO2 - SvO2) / 100 * HGB * 13.4)); // Cardiac Output
     		}
@@ -21563,6 +21573,10 @@ var app = (function () {
 
     		if ($$self.$$.dirty[0] & /*HR, SV*/ 4100) {
     			$$invalidate(37, CO2 = HR * SV / 1000); // Cardiac output from SV
+    		}
+
+    		if ($$self.$$.dirty[0] & /*SBP, DBP*/ 24576) {
+    			SBP < DBP ? $$invalidate(14, DBP = SBP) : null;
     		}
 
     		if ($$self.$$.dirty[0] & /*SBP, DBP*/ 24576) {
@@ -21583,6 +21597,10 @@ var app = (function () {
 
     		if ($$self.$$.dirty[0] & /*MAP, CVP, CI*/ 524801) {
     			$$invalidate(34, SVRI = (MAP - CVP) / CI);
+    		}
+
+    		if ($$self.$$.dirty[0] & /*PASP, PADP*/ 3072) {
+    			PASP < PADP ? $$invalidate(11, PADP = PASP) : null;
     		}
 
     		if ($$self.$$.dirty[0] & /*PASP, PADP*/ 3072) {
