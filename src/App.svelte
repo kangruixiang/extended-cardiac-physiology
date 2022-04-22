@@ -286,7 +286,7 @@
         <Dynamic min={53} max={76} bind:result={inches}>
           Height (in)
           {Math.floor(feet)}"{Math.round(feetRemainder)}
-          {Math.round(CM * 100) / 100} cm
+          {Math.round(CM)} cm
         </Dynamic>
 
         <Dynamic min={60} max={100} bind:result={SaO2}>SaO2 (%)</Dynamic>
